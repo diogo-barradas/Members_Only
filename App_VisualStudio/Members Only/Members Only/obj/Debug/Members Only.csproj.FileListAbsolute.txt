@@ -1,0 +1,58 @@
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\Members Only.exe.config
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\Members Only.exe
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\Members Only.pdb
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members Only.csprojAssemblyReference.cache
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members_Only.Properties.Resources.resources
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members Only.csproj.GenerateResource.cache
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members Only.csproj.CoreCompileInputs.cache
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members Only.exe
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members Only.pdb
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members_Only.Consultar.resources
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members_Only.Depositos.resources
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members_Only.Donativos.resources
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members_Only.FormAdmin.resources
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members_Only.Levantamentos.resources
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members_Only.Lista.resources
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members_Only.Lista2.resources
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members_Only.Lista3.resources
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members_Only.Login.resources
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members_Only.Logotipo.resources
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members_Only.Menu.resources
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members_Only.Registar.resources
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members_Only.Terminar.resources
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members_Only.Transferências.resources
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\Google.Protobuf.dll
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\MySql.Data.dll
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\Renci.SshNet.dll
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\System.Buffers.dll
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\System.Memory.dll
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\Zstandard.Net.dll
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\Google.Protobuf.pdb
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\Google.Protobuf.xml
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\MySql.Data.xml
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\Renci.SshNet.xml
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\System.Buffers.xml
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\System.Memory.xml
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members Only.csproj.CopyComplete
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\Dapper.Contrib.dll
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\Dapper.dll
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\EntityFramework.dll
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\MySql.Data.Entity.EF6.dll
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\Dapper.xml
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\Dapper.Contrib.xml
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\EntityFramework.xml
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\MySql.Data.Entity.EF6.xml
