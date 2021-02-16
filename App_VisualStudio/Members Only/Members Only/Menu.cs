@@ -40,12 +40,12 @@ namespace Members_Only
             panel1.Visible = false;
             if (Class1.moedatipo == "€")
             {
-                MessageBox.Show("O Dinheiro já se encontra em Euros!");
+                MessageBox.Show("O dinheiro já se encontra em Euros!");
             }
             else
             {
                 Class1.moedatipo = "€";
-                MessageBox.Show($"- O Dinheiro foi atualizado para Euros ({Class1.moedatipo})\n\n- Atualize a Página para ver as mudanças!");
+                MessageBox.Show($"- O dinheiro foi atualizado para Euros ({Class1.moedatipo})\n\n- Atualize a Página para ver as alterações!");
             }
         }
 
@@ -54,12 +54,12 @@ namespace Members_Only
             panel1.Visible = false;
             if (Class1.moedatipo == "$")
             {
-                MessageBox.Show("O Dinheiro já se encontra em Dólares!");
+                MessageBox.Show("O dinheiro já se encontra em Dólares!");
             }
             else
             {
                 Class1.moedatipo = "$";
-                MessageBox.Show($"- O Dinheiro foi atualizado para Dólares ({Class1.moedatipo})\n\n- Atualize a Página para ver as mudanças!");
+                MessageBox.Show($"- O dinheiro foi atualizado para Dólares ({Class1.moedatipo})\n\n- Atualize a Página para ver as alterações!");
             }
         }
 
@@ -68,12 +68,12 @@ namespace Members_Only
             panel1.Visible = false;
             if (Class1.moedatipo == "£")
             {
-                MessageBox.Show("O Dinheiro já se encontra em Libras!");
+                MessageBox.Show("O dinheiro já se encontra em Libras!");
             }
             else
             {
                 Class1.moedatipo = "£";
-                MessageBox.Show($"- O Dinheiro foi atualizado para Libras ({Class1.moedatipo})\n\n- Atualize a Página para ver as mudanças!");
+                MessageBox.Show($"- O dinheiro foi atualizado para Libras ({Class1.moedatipo})\n\n- Atualize a Página para ver as alterações!");
             }
         }
 
@@ -232,7 +232,7 @@ namespace Members_Only
 
         private void pictureBox2_MouseHover(object sender, EventArgs e)
         {
-            toolTip.SetToolTip(pictureBox2, $"Bank$Acc é uma empresa de pagamentos online.\n\n{_username} você é o nosso utilizador número {Class1.iduser}.");
+            toolTip.SetToolTip(pictureBox2, $"Members Only é uma empresa de pagamentos online.\n\n{_username} você é o nosso utilizador número {Class1.iduser}.");
         }
     }
 }

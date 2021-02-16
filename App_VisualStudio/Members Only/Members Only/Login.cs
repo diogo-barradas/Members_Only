@@ -88,7 +88,7 @@ namespace Members_Only
                         var user = reader.GetString(0);
                         Class1.iduser = int.Parse(textBox1.Text);
 
-                        if (MessageBox.Show($"Bem-Vindo {user}! Deseja consultar a visão de Moderador?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        if (MessageBox.Show($"Bem-Vindo {user}! Deseja consultar a visão de moderador?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             this.Hide();
                             FormAdmin admin = new FormAdmin();
@@ -113,14 +113,14 @@ namespace Members_Only
                 }
                 else
                 {
-                    MessageBox.Show("O ID e o PIN fornecidos não correspondem às informações em nossos registros.Verifique-as e tente novamente.");
+                    MessageBox.Show("O ID e o PIN fornecidos não correspondem às informações em nossos registros. Verifique-as e tente novamente.");
                 }
                 connection.Close();
             }
 
             catch (MySqlException)
             {
-                MessageBox.Show("Você necessita abrir o XAMPP!", "Sem conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Insucesso durante a ligação á base de dados.", "Inicie o xampp", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ox)
             {

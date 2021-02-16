@@ -171,7 +171,7 @@ namespace Members_Only
                     catch (Exception)
                     {
                         connection.Close();
-                        MessageBox.Show("Reveja os seus Dados!");
+                        MessageBox.Show("Reveja os seus dados!");
                     }
                     finally
                     {
@@ -181,12 +181,12 @@ namespace Members_Only
                 else
                 {
                     connection.Close();
-                    MessageBox.Show("O email deve conter @ e .com");
+                    MessageBox.Show("O email deve conter um @ e .com");
                 }
             }
             catch (MySqlException)
             {
-                MessageBox.Show("Você necessita abrir o XAMPP!", "Sem conexão", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Insucesso durante a ligação á base de dados.", "Inicie o xampp", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ox)
             {

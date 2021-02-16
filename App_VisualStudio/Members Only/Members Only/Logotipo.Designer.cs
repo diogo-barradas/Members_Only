@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Logotipo));
             this.TituloCapa = new System.Windows.Forms.Label();
             this.Data = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -46,11 +45,11 @@
             this.TituloCapa.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.TituloCapa.Font = new System.Drawing.Font("Segoe Print", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TituloCapa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(164)))), ((int)(((byte)(93)))));
-            this.TituloCapa.Location = new System.Drawing.Point(338, 272);
+            this.TituloCapa.Location = new System.Drawing.Point(301, 272);
             this.TituloCapa.Name = "TituloCapa";
-            this.TituloCapa.Size = new System.Drawing.Size(154, 47);
+            this.TituloCapa.Size = new System.Drawing.Size(217, 47);
             this.TituloCapa.TabIndex = 1;
-            this.TituloCapa.Text = "Bank$Acc";
+            this.TituloCapa.Text = "Members Only";
             // 
             // Data
             // 
@@ -103,7 +102,6 @@
             this.Controls.Add(this.Data);
             this.Controls.Add(this.BankCapa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Logotipo";
             this.Opacity = 0.95D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
