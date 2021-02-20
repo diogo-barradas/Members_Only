@@ -385,9 +385,6 @@
     <None Include="Resources\Levantar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Logo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Pagamento.png" />
   </ItemGroup>
   <ItemGroup>
@@ -395,6 +392,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Transferir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\splashscreen.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
