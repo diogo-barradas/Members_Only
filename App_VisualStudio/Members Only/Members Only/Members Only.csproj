@@ -310,12 +310,6 @@
     <None Include="Resources\eye1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\FecharFinal1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\FecharFinal2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\FecharForm.png" />
   </ItemGroup>
   <ItemGroup>
@@ -334,12 +328,6 @@
     <None Include="Resources\Libra.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\MaximizarFinal1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MinimizarFinal1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\nova.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -349,25 +337,13 @@
     <None Include="Resources\Tipo de moeda.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\exitfinal.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exitfinal1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\FecharFinal.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-atm-80.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\MaximizarFinal.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Medicos Mundo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\MinimizarFinal.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\nariz vermelho.png" />
@@ -395,6 +371,75 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\splashscreen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registo_image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\linkedin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_id.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_morada.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_idade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin_utilizadores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin_depositos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin_levantamentos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin_transferencias.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\admin_admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitfinal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exitfinal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FecharFinal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FecharFinal2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaximizarFinal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaximizarFinal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinimizarFinal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinimizarFinal1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

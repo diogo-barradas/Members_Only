@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel3 = new System.Windows.Forms.Panel();
             this.Slidepanel = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -66,7 +67,7 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
             this.panel3.Controls.Add(this.Slidepanel);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.label2);
@@ -106,7 +107,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
             this.label2.Font = new System.Drawing.Font("Tempus Sans ITC", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(2, 22);
@@ -120,7 +121,7 @@
             // 
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Image = global::Members_Only.Properties.Resources.Sair;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -128,7 +129,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(154, 50);
             this.button7.TabIndex = 6;
-            this.button7.Text = "           Terminar sessão";
+            this.button7.Text = "       Terminar sessão";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -137,7 +138,7 @@
             // 
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Image = global::Members_Only.Properties.Resources.Pagamento;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -145,7 +146,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(154, 50);
             this.button6.TabIndex = 5;
-            this.button6.Text = "           Donativos";
+            this.button6.Text = "        Donativos";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -154,7 +155,7 @@
             // 
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = global::Members_Only.Properties.Resources.Transferir;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,7 +163,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(154, 50);
             this.button5.TabIndex = 4;
-            this.button5.Text = "           Transferências";
+            this.button5.Text = "        Transferências";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -171,7 +172,7 @@
             // 
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = global::Members_Only.Properties.Resources.Levantar;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -179,7 +180,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(154, 50);
             this.button4.TabIndex = 3;
-            this.button4.Text = "           Levantamentos";
+            this.button4.Text = "         Levantamentos";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -188,7 +189,7 @@
             // 
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::Members_Only.Properties.Resources.Deposito;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -196,7 +197,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(154, 50);
             this.button3.TabIndex = 2;
-            this.button3.Text = "           Depósitos";
+            this.button3.Text = "         Depósitos";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -205,7 +206,7 @@
             // 
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = global::Members_Only.Properties.Resources.Consultar;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -213,7 +214,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(154, 50);
             this.button2.TabIndex = 1;
-            this.button2.Text = "           Consultar";
+            this.button2.Text = "         Consultar";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -222,7 +223,7 @@
             // 
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::Members_Only.Properties.Resources.Tipo_de_moeda;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -230,14 +231,14 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(154, 50);
             this.button1.TabIndex = 0;
-            this.button1.Text = "           Mudar moeda";
+            this.button1.Text = "         Mudar moeda";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
             this.panel1.Controls.Add(this.button11);
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.button9);
@@ -248,9 +249,10 @@
             // 
             // button11
             // 
+            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.White;
             this.button11.Image = global::Members_Only.Properties.Resources.Libra;
             this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -259,14 +261,15 @@
             this.button11.Size = new System.Drawing.Size(200, 35);
             this.button11.TabIndex = 2;
             this.button11.Text = "Libras";
-            this.button11.UseVisualStyleBackColor = true;
+            this.button11.UseVisualStyleBackColor = false;
             this.button11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button11_MouseClick);
             // 
             // button10
             // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
             this.button10.Image = global::Members_Only.Properties.Resources.Dollar;
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -275,14 +278,15 @@
             this.button10.Size = new System.Drawing.Size(200, 35);
             this.button10.TabIndex = 1;
             this.button10.Text = "Dólares";
-            this.button10.UseVisualStyleBackColor = true;
+            this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button9
             // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.Image = global::Members_Only.Properties.Resources.Euro;
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -292,14 +296,14 @@
             this.button9.Size = new System.Drawing.Size(200, 35);
             this.button9.TabIndex = 0;
             this.button9.Text = "Euros";
-            this.button9.UseVisualStyleBackColor = true;
+            this.button9.UseVisualStyleBackColor = false;
             this.button9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button9_MouseClick);
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(94)))));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
             this.panel2.Controls.Add(this.MinimizarApp);
             this.panel2.Controls.Add(this.MaximizarApp);
             this.panel2.Controls.Add(this.FecharApp);
@@ -317,11 +321,11 @@
             this.MinimizarApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MinimizarApp.BackColor = System.Drawing.Color.Transparent;
             this.MinimizarApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MinimizarApp.Image = global::Members_Only.Properties.Resources.MinimizarFinal1;
+            this.MinimizarApp.Image = ((System.Drawing.Image)(resources.GetObject("MinimizarApp.Image")));
             this.MinimizarApp.Location = new System.Drawing.Point(842, 3);
             this.MinimizarApp.Name = "MinimizarApp";
             this.MinimizarApp.Size = new System.Drawing.Size(21, 21);
-            this.MinimizarApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MinimizarApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.MinimizarApp.TabIndex = 1;
             this.MinimizarApp.TabStop = false;
             this.MinimizarApp.Click += new System.EventHandler(this.MinimizarApp_Click);
@@ -333,11 +337,11 @@
             this.MaximizarApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MaximizarApp.BackColor = System.Drawing.Color.Transparent;
             this.MaximizarApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MaximizarApp.Image = global::Members_Only.Properties.Resources.MaximizarFinal1;
+            this.MaximizarApp.Image = ((System.Drawing.Image)(resources.GetObject("MaximizarApp.Image")));
             this.MaximizarApp.Location = new System.Drawing.Point(869, 3);
             this.MaximizarApp.Name = "MaximizarApp";
             this.MaximizarApp.Size = new System.Drawing.Size(21, 21);
-            this.MaximizarApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.MaximizarApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.MaximizarApp.TabIndex = 2;
             this.MaximizarApp.TabStop = false;
             this.MaximizarApp.Click += new System.EventHandler(this.MaximizarApp_Click);
@@ -349,11 +353,11 @@
             this.FecharApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FecharApp.BackColor = System.Drawing.Color.Transparent;
             this.FecharApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FecharApp.Image = global::Members_Only.Properties.Resources.FecharFinal2;
+            this.FecharApp.Image = ((System.Drawing.Image)(resources.GetObject("FecharApp.Image")));
             this.FecharApp.Location = new System.Drawing.Point(896, 3);
             this.FecharApp.Name = "FecharApp";
             this.FecharApp.Size = new System.Drawing.Size(21, 21);
-            this.FecharApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.FecharApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.FecharApp.TabIndex = 3;
             this.FecharApp.TabStop = false;
             this.FecharApp.Click += new System.EventHandler(this.FecharApp_Click);
@@ -394,14 +398,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(85)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(921, 510);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Menu";
-            this.Opacity = 0.91D;
+            this.Opacity = 0.99D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.panel3.ResumeLayout(false);
@@ -409,6 +413,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizarApp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaximizarApp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FecharApp)).EndInit();

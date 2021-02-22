@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-
 
 namespace Members_Only
 {
@@ -17,13 +9,14 @@ namespace Members_Only
         public Registar()
         {
             InitializeComponent();
+            textBox2.UseSystemPasswordChar = false;
         }
 
         MySqlConnection connection = new MySqlConnection(@"server=127.0.0.1;uid=root;database=members_only");
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Morada")
+            if (textBox1.Text == "Digite a sua morada")
             {
                 textBox1.Text = "";
             }
@@ -33,13 +26,14 @@ namespace Members_Only
         {
             if (textBox1.Text == "")
             {
-                textBox1.Text = "Morada";
+                textBox1.Text = "Digite a sua morada";
             }
         }
 
         private void textBox2_Enter(object sender, EventArgs e)
         {
-            if (textBox2.Text == "OPIN")
+            textBox2.UseSystemPasswordChar = true;
+            if (textBox2.Text == "Digite o seu PIN")
             {
                 textBox2.Text = "";
             }
@@ -49,13 +43,14 @@ namespace Members_Only
         {
             if (textBox2.Text == "")
             {
-                textBox2.Text = "OPIN";
+                textBox2.Text = "Digite o seu PIN";
+                textBox2.UseSystemPasswordChar = false;
             }
         }
 
         private void textBox3_Enter(object sender, EventArgs e)
         {
-            if (textBox3.Text == "Email")
+            if (textBox3.Text == "Digite o seu email")
             {
                 textBox3.Text = "";
             }
@@ -65,13 +60,13 @@ namespace Members_Only
         {
             if (textBox3.Text == "")
             {
-                textBox3.Text = "Email";
+                textBox3.Text = "Digite o seu email";
             }
         }
 
         private void textBox4_Enter(object sender, EventArgs e)
         {
-            if (textBox4.Text == "Idade")
+            if (textBox4.Text == "Digite o seu ano de nascimento")
             {
                 textBox4.Text = "";
             }
@@ -81,34 +76,42 @@ namespace Members_Only
         {
             if (textBox4.Text == "")
             {
-                textBox4.Text = "Idade";
+                textBox4.Text = "Digite o seu ano de nascimento";
             }
         }
 
         private void textBox5_Enter(object sender, EventArgs e)
         {
-            if (textBox5.Text == "Username")
+            if (textBox5.Text == "Digite o seu nome")
             {
                 textBox5.Text = "";
             }
         }
+
         private void textBox5_Leave(object sender, EventArgs e)
         {
             if (textBox5.Text == "")
             {
-                textBox5.Text = "Username";
+                textBox5.Text = "Digite o seu nome";
             }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == true)
+            if (textBox2.Text == "Digite o seu PIN")
             {
-                textBox2.UseSystemPasswordChar = false;
+                //não faz nada pois não está la o pin.
             }
             else
             {
-                textBox2.UseSystemPasswordChar = true;
+                if (checkBox1.Checked == true)
+                {
+                    textBox2.UseSystemPasswordChar = false;
+                }
+                else
+                {
+                    textBox2.UseSystemPasswordChar = true;
+                }
             }
         }
 
@@ -117,20 +120,40 @@ namespace Members_Only
             try
             {
                 connection.Open();
-                if (textBox1.Text == "Morada" || textBox2.Text == "OPIN" || textBox3.Text == "Email" || textBox4.Text == "Idade" || textBox5.Text == "Username" || textBox2.Text.Length != 4)
+                if (textBox1.Text == "Digite a sua morada" || textBox2.Text == "Digite o seu PIN" || textBox3.Text == "Digite o seu email" || textBox4.Text == "Digite o seu ano de nascimento" || textBox5.Text == "Digite o seu nome")
                 {
                     connection.Close();
-                    MessageBox.Show("Todos os campos são obrigatórios!\nPIN = 4 Digitos/Letras");
+                    textBox1.Text = "Digite a sua morada";
+                    textBox2.Text = "Digite o seu PIN";
+                    textBox3.Text = "Digite o seu email";
+                    textBox4.Text = "Digite o seu ano de nascimento";
+                    textBox5.Text = "Digite o seu nome";
+                    textBox2.UseSystemPasswordChar = false;
+                    MessageBox.Show("Todos os campos são obrigatórios!");
+                }
+                else if (textBox2.Text.Length != 4)
+                {
+                    connection.Close();
+                    textBox2.Text = "Digite o seu PIN";
+                    textBox2.UseSystemPasswordChar = false;
+                    MessageBox.Show("O seu PIN deve conter quatro digitos ou letras.");
+                }
+                else if (textBox4.Text.Length != 4)
+                {
+                    connection.Close();
+                    textBox4.Text = "Digite o seu ano de nascimento";
+                    MessageBox.Show("O seu Ano de Nascimento deve estar completo!");
                 }
                 else if (textBox3.Text.Contains("@") && textBox3.Text.Contains("."))
                 {
                     try
                     {
                         int Idadeuser = int.Parse(textBox4.Text);
-                        if (Idadeuser < 18)
+                        if (Idadeuser > 2003)
                         {
                             connection.Close();
-                            MessageBox.Show("A Idade minima é 18!");
+                            textBox4.Text = "Digite o seu ano de nascimento";
+                            MessageBox.Show("A Idade mínima para usar Members Only é de 18 anos!");
                         }
                         else
                         {
@@ -166,11 +189,23 @@ namespace Members_Only
                     catch (MySqlException ex)
                     {
                         connection.Close();
+                        textBox1.Text = "Digite a sua morada";
+                        textBox2.Text = "Digite o seu PIN";
+                        textBox3.Text = "Digite o seu email";
+                        textBox4.Text = "Digite o seu ano de nascimento";
+                        textBox5.Text = "Digite o seu nome";
+                        textBox2.UseSystemPasswordChar = false;
                         MessageBox.Show(ex.Message, "Este utilizador já existe!");
                     }
                     catch (Exception)
                     {
                         connection.Close();
+                        textBox1.Text = "Digite a sua morada";
+                        textBox2.Text = "Digite o seu PIN";
+                        textBox3.Text = "Digite o seu email";
+                        textBox4.Text = "Digite o seu ano de nascimento";
+                        textBox5.Text = "Digite o seu nome";
+                        textBox2.UseSystemPasswordChar = false;
                         MessageBox.Show("Reveja os seus dados!");
                     }
                     finally
@@ -181,24 +216,30 @@ namespace Members_Only
                 else
                 {
                     connection.Close();
+                    textBox3.Text = "Digite o seu email";
                     MessageBox.Show("O email deve conter um @ e .com");
                 }
             }
             catch (MySqlException)
             {
+                textBox1.Text = "Digite a sua morada";
+                textBox2.Text = "Digite o seu PIN";
+                textBox3.Text = "Digite o seu email";
+                textBox4.Text = "Digite o seu ano de nascimento";
+                textBox5.Text = "Digite o seu nome";
+                textBox2.UseSystemPasswordChar = false;
                 MessageBox.Show("Insucesso durante a ligação á base de dados.", "Inicie o xampp", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ox)
             {
+                textBox1.Text = "Digite a sua morada";
+                textBox2.Text = "Digite o seu PIN";
+                textBox3.Text = "Digite o seu email";
+                textBox4.Text = "Digite o seu ano de nascimento";
+                textBox5.Text = "Digite o seu nome";
+                textBox2.UseSystemPasswordChar = false;
                 MessageBox.Show(ox.Message, "Notificação");
             }
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Login login = new Login();
-            login.ShowDialog();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -222,6 +263,13 @@ namespace Members_Only
             {
                 e.Handled = true;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Login login = new Login();
+            login.ShowDialog();
         }
     }
 }

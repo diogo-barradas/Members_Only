@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-
 
 namespace Members_Only
 {
@@ -30,7 +24,7 @@ namespace Members_Only
             button8.Visible = false;
 
             cnn.Open();
-            string tabela = $"SELECT * FROM registo;";
+            string tabela = $"SELECT ID,Username,Idade,Email,Morada FROM registo;";
             MySqlCommand cmd = new MySqlCommand(tabela, cnn);
             MySqlDataAdapter antiga = new MySqlDataAdapter(cmd);
             DataTable table = new DataTable();
@@ -48,7 +42,7 @@ namespace Members_Only
 
             //atualizar o dataGrid
             cnn.Open();
-            string bduser = $"SELECT * FROM registo;";
+            string bduser = $"SELECT ID,Username,Idade,Email,Morada FROM registo;";
             MySqlCommand cmd = new MySqlCommand(bduser, cnn);
             MySqlDataAdapter nova = new MySqlDataAdapter(cmd);
             DataTable table = new DataTable();
@@ -222,7 +216,7 @@ namespace Members_Only
                         {
                             if (alo.ExecuteNonQuery() > 0)
                             {
-                                string bduser = $"SELECT * FROM registo;";
+                                string bduser = $"SELECT ID,Username,Idade,Email,Morada FROM registo;";
                                 MySqlCommand cmd = new MySqlCommand(bduser, cnn);
                                 MySqlDataAdapter nova = new MySqlDataAdapter(cmd);
                                 DataTable table = new DataTable();
