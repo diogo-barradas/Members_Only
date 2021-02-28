@@ -441,6 +441,48 @@
   <ItemGroup>
     <None Include="Resources\MinimizarFinal1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_moeda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_consultar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_depositar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_levantar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_transferencias.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_donativos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_fechar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_euro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_dollar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_libra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FecharFinal3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaximizarFinal3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MinimizarFinal3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

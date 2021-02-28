@@ -1,30 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-
 
 namespace Members_Only
 {
     public partial class Menu : Form
     {
+        public double saldo;
         private bool dragging = false;
         private Point startPoint = new Point(0, 0);
 
         MySqlConnection connection = new MySqlConnection(@"server=127.0.0.1;uid=root;database=members_only");
         private string _username;
+
         public Menu()
         {
             InitializeComponent();
+            
+            panel3.Visible = false;
             panel1.Visible = false;
-            Slidepanel.Height = button1.Height;
-            Slidepanel.Top = button1.Top;
+            Slidepanel.Height = (button1.Height - 15);
+            Slidepanel.Top = (button1.Top + 10);
             Class1.moedatipo = "€";//euro é a moeda caso o user nao mude 
 
             connection.Open();
@@ -33,6 +30,17 @@ namespace Members_Only
             reader.Read();
             _username = reader.GetString(0);
             connection.Close();
+
+            connection.Open();
+            MySqlCommand commmand = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
+            MySqlDataReader reaader = commmand.ExecuteReader();
+            reaader.Read();
+            saldo = reaader.GetDouble(0);
+            connection.Close();
+
+            label_nome.Text = $"Nome: {_username}";
+            label_id.Text = $"ID: {Class1.iduser}";
+            label_saldo.Text = $"Saldo: {saldo}{Class1.moedatipo}";
         }
 
         private void button9_MouseClick(object sender, MouseEventArgs e)
@@ -133,8 +141,8 @@ namespace Members_Only
             {
                 panel1.Visible = false;
             }
-            Slidepanel.Height = button1.Height;
-            Slidepanel.Top = button1.Top;
+            Slidepanel.Height = (button1.Height - 15);
+            Slidepanel.Top = (button1.Top + 10);
         }
 
         //MDI
@@ -156,48 +164,48 @@ namespace Members_Only
         {
             panel1.Visible = false;
             openChildForm(new Consultar());
-            Slidepanel.Height = button2.Height;
-            Slidepanel.Top = button2.Top;
+            Slidepanel.Height = (button2.Height - 15);
+            Slidepanel.Top = (button2.Top + 10);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
             openChildForm(new Depositos());
-            Slidepanel.Height = button3.Height;
-            Slidepanel.Top = button3.Top;
+            Slidepanel.Height = (button3.Height - 15);
+            Slidepanel.Top = (button3.Top + 10);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
             openChildForm(new Levantamentos());
-            Slidepanel.Height = button4.Height;
-            Slidepanel.Top = button4.Top;
+            Slidepanel.Height = (button4.Height - 15);
+            Slidepanel.Top = (button4.Top + 10);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
             openChildForm(new Transferências());
-            Slidepanel.Height = button5.Height;
-            Slidepanel.Top = button5.Top;
+            Slidepanel.Height = (button5.Height - 15);
+            Slidepanel.Top = (button5.Top + 10);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
             openChildForm(new Donativos());
-            Slidepanel.Height = button6.Height;
-            Slidepanel.Top = button6.Top;
+            Slidepanel.Height = (button6.Height - 15);
+            Slidepanel.Top = (button6.Top + 10);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
             openChildForm(new Terminar());
-            Slidepanel.Height = button7.Height;
-            Slidepanel.Top = button7.Top;
+            Slidepanel.Height = (button7.Height - 15);
+            Slidepanel.Top = (button7.Top + 10);
         }
 
         private void FecharApp_MouseHover(object sender, EventArgs e)
@@ -207,7 +215,7 @@ namespace Members_Only
 
         private void FecharApp_MouseLeave(object sender, EventArgs e)
         {
-            FecharApp.Image = Properties.Resources.FecharFinal2;
+            FecharApp.Image = Properties.Resources.FecharFinal3;
         }
 
         private void MaximizarApp_MouseHover(object sender, EventArgs e)
@@ -217,7 +225,7 @@ namespace Members_Only
 
         private void MaximizarApp_MouseLeave(object sender, EventArgs e)
         {
-            MaximizarApp.Image = Properties.Resources.MaximizarFinal1;
+            MaximizarApp.Image = Properties.Resources.MaximizarFinal3;
         }
 
         private void MinimizarApp_MouseHover(object sender, EventArgs e)
@@ -227,12 +235,42 @@ namespace Members_Only
 
         private void MinimizarApp_MouseLeave(object sender, EventArgs e)
         {
-            MinimizarApp.Image = Properties.Resources.MinimizarFinal1;
+            MinimizarApp.Image = Properties.Resources.MinimizarFinal3;
         }
 
         private void pictureBox2_MouseHover(object sender, EventArgs e)
         {
+            panel4.Visible = false;
+            panel3.Visible = true;
             toolTip.SetToolTip(pictureBox2, $"Members Only é uma empresa de pagamentos online.\n\n{_username} você é o nosso utilizador número {Class1.iduser}.");
+        }
+
+        private void panel4_MouseHover(object sender, EventArgs e)
+        {        
+            panel4.Visible = false;
+            panel3.Visible = true;
+        }
+
+        private void panel3_MouseHover(object sender, EventArgs e)
+        {
+            panel4.Visible = false;
+            panel3.Visible = true;
+        }
+
+        private void panelChildForm_MouseHover(object sender, EventArgs e)
+        {
+            connection.Open();
+            MySqlCommand commmand = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
+            MySqlDataReader reaader = commmand.ExecuteReader();
+            reaader.Read();
+            saldo = reaader.GetDouble(0);
+            connection.Close();
+
+            label_saldo.Text = $"Saldo: {saldo}{Class1.moedatipo}";
+
+            panel1.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = true;
         }
     }
 }
