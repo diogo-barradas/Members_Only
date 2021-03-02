@@ -483,6 +483,63 @@
   <ItemGroup>
     <None Include="Resources\MinimizarFinal3.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exemplo_user.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moldura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exemplo_user2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mastercard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paypal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adicionarcartao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trocar_cartao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartao_exemplo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartao_exemplo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cartao_exemplo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1 %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1 %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1 %283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %284%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %285%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comando %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comando %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comando %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

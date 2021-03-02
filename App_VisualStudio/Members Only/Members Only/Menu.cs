@@ -272,5 +272,30 @@ namespace Members_Only
             panel3.Visible = false;
             panel4.Visible = true;
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label_hora.Text = "" + DateTime.Now.ToString("HH:mm:ss, dd-MM-yyyy");
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Properties.Resources.exemplo_user2;
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Properties.Resources.exemplo_user;
+        }
+
+        private void pictureBox20_MouseClick(object sender, MouseEventArgs e)
+        {
+            panel1.Visible = false;
+            panel4.Visible = false;
+            panel3.Visible = true;
+            openChildForm(new Transferências());
+            Slidepanel.Height = (button5.Height - 15);
+            Slidepanel.Top = (button5.Top + 10);
+        }
     }
 }
