@@ -107,14 +107,9 @@ namespace Members_Only
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
             this.Hide();
-            Menu guest = new Menu();
-            guest.ShowDialog();
+            Login login = new Login();
+            login.ShowDialog();
         }
 
         //Arrastar Janela
@@ -166,16 +161,6 @@ namespace Members_Only
             pictureBox3.Image = Properties.Resources.MinimizarFinal1;
         }
 
-        private void pictureBox1_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBox1.Image = Properties.Resources.exitfinal;
-        }
-
-        private void pictureBox1_MouseHover(object sender, EventArgs e)
-        {
-            pictureBox1.Image = Properties.Resources.exitfinal1;
-        }
-
         private void pictureBox3_MouseHover(object sender, EventArgs e)
         {
             pictureBox3.Image = Properties.Resources.MinimizarFinal;
@@ -200,7 +185,7 @@ namespace Members_Only
                 int id = Convert.ToInt32(selected);
                 if (id == 1)
                 {
-                    MessageBox.Show("O admin nao pode ser apagado!");
+                    MessageBox.Show("O admin não pode ser apagado!");
                 }
                 else
                 {

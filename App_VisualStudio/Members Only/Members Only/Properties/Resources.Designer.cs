@@ -63,16 +63,6 @@ namespace Members_Only.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap adicionarcartao {
-            get {
-                object obj = ResourceManager.GetObject("adicionarcartao", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap admin_admin {
             get {
                 object obj = ResourceManager.GetObject("admin_admin", resourceCulture);
@@ -126,36 +116,6 @@ namespace Members_Only.Properties {
         internal static System.Drawing.Bitmap admin_utilizadores {
             get {
                 object obj = ResourceManager.GetObject("admin_utilizadores", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap cartao_exemplo {
-            get {
-                object obj = ResourceManager.GetObject("cartao_exemplo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap cartao_exemplo2 {
-            get {
-                object obj = ResourceManager.GetObject("cartao_exemplo2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap cartao_exemplo3 {
-            get {
-                object obj = ResourceManager.GetObject("cartao_exemplo3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,26 +226,6 @@ namespace Members_Only.Properties {
         internal static System.Drawing.Bitmap exemplo_user2 {
             get {
                 object obj = ResourceManager.GetObject("exemplo_user2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap exitfinal {
-            get {
-                object obj = ResourceManager.GetObject("exitfinal", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap exitfinal1 {
-            get {
-                object obj = ResourceManager.GetObject("exitfinal1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

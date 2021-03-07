@@ -15,7 +15,6 @@ namespace Members_Only
             panelbd.Visible = false;
             panel8.Visible = false;
             tempo.Visible = false;
-            label3.Text = Class1.moedatipo;
 
             cnn.Open();
             string bdtranferencias = $"SELECT Descriçao, Hora, Valor, idDestinatario FROM transferencias WHERE (ID = {Class1.iduser})";
@@ -31,7 +30,7 @@ namespace Members_Only
             MySqlDataReader reader = command.ExecuteReader();
             reader.Read();
             _saldo = reader.GetDouble(0);
-            Saldo.Text = _saldo.ToString();
+            Saldo.Text = $"{_saldo}{Class1.moedatipo}";
             cnn.Close();
         }
 
@@ -89,6 +88,10 @@ namespace Members_Only
                             {
                                 MessageBox.Show("Você não pode transferir para si mesmo!");
                             }
+                            else if (_iddestino == 1)
+                            {
+                                MessageBox.Show("Você não pode transferir para o admin!");
+                            }
                             else
                             {
                                 try
@@ -101,7 +104,7 @@ namespace Members_Only
                                         _saldodestino = abc.GetDouble(0);
                                         double saldofinal = _saldo -= transferirvalor;
                                         double saldofinaldestino = _saldodestino += transferirvalor;
-                                        Saldo.Text = saldofinal.ToString();
+                                        Saldo.Text = $"{saldofinal}{Class1.moedatipo}";
                                         cnn.Close();
 
                                         cnn.Open();
@@ -251,6 +254,20 @@ namespace Members_Only
             {
                 e.Handled = true;
             }
+        }
+
+        public double saldorefresh;
+
+        private void panel1_MouseHover(object sender, EventArgs e)
+        {
+            cnn.Open();
+            MySqlCommand commmand = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", cnn);
+            MySqlDataReader reaaaaader = commmand.ExecuteReader();
+            reaaaaader.Read();
+            saldorefresh = reaaaaader.GetDouble(0);
+            cnn.Close();
+
+            Saldo.Text = $"{saldorefresh}{Class1.moedatipo}";
         }
     }
 }

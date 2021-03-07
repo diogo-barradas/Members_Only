@@ -12,6 +12,7 @@ namespace Members_Only
             textBox2.UseSystemPasswordChar = false;
         }
 
+        public string pinadmin;
         MySqlConnection connection = new MySqlConnection(@"server=127.0.0.1;uid=root;database=members_only");
 
         //Faz desaparecer o texto da textbox ao clicar
@@ -88,34 +89,29 @@ namespace Members_Only
             else
             {
                 MySqlCommand command = new MySqlCommand("SELECT Username,ID,PIN FROM registo WHERE ID=@ID AND PIN=@PIN", connection);
-
                 command.Parameters.AddWithValue("@ID", textBox1.Text);
                 command.Parameters.AddWithValue("@PIN", textBox2.Text);
 
                 try
                 {
                     connection.Open();
+                    MySqlCommand com = new MySqlCommand("SELECT PIN FROM registo WHERE(ID = 1)", connection);
+                    MySqlDataReader ler = com.ExecuteReader();
+                    ler.Read();
+                    pinadmin = ler.GetString(0);
+                    connection.Close();
+
+                    connection.Open();
                     MySqlDataReader reader = command.ExecuteReader();
 
                     if (reader.Read())
                     {
-                        if (textBox1.Text == "1" && textBox2.Text == "1234")
+                        if (textBox1.Text == "1" && textBox2.Text == pinadmin)
                         {
-                            var user = reader.GetString(0);
-                            Class1.iduser = int.Parse(textBox1.Text);
-
-                            if (MessageBox.Show($"Bem-Vindo {user}! Deseja consultar a visão de moderador?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                            {
-                                this.Hide();
-                                FormAdmin admin = new FormAdmin();
-                                admin.ShowDialog();
-                            }
-                            else
-                            {
-                                this.Hide();
-                                Menu menuguest = new Menu();
-                                menuguest.ShowDialog();
-                            }
+                            MessageBox.Show("Isto é uma área ultra secreta!");
+                            this.Hide();
+                            FormAdmin admin = new FormAdmin();
+                            admin.ShowDialog();
                         }
                         else
                         {

@@ -14,7 +14,6 @@ namespace Members_Only
             InitializeComponent();
             panel8.Visible = false;
             tempo.Visible = false;
-            label3.Text = Class1.moedatipo;
 
             cnn.Open();
             string bddepositos = $"SELECT Descriçao, Hora, Valor FROM depositos WHERE (ID = {Class1.iduser})";
@@ -29,7 +28,7 @@ namespace Members_Only
             MySqlDataReader reader = command.ExecuteReader();
             reader.Read();
             _saldo = reader.GetDouble(0);
-            Saldo.Text = _saldo.ToString();
+            Saldo.Text = $"{_saldo}{Class1.moedatipo}";
             cnn.Close();
         }
 
@@ -76,7 +75,7 @@ namespace Members_Only
                     else
                     {
                         double saldofinal = _saldo += addvalor;
-                        Saldo.Text = saldofinal.ToString();
+                        Saldo.Text = $"{saldofinal}{Class1.moedatipo}";
 
                         MySqlDataAdapter adapter = new MySqlDataAdapter();
                         try
@@ -161,6 +160,20 @@ namespace Members_Only
             {
                 e.Handled = true;
             }
+        }
+
+        public double saldorefresh;
+
+        private void panel1_MouseHover(object sender, EventArgs e)
+        {
+            cnn.Open();
+            MySqlCommand commmand = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", cnn);
+            MySqlDataReader reaaaaader = commmand.ExecuteReader();
+            reaaaaader.Read();
+            saldorefresh = reaaaaader.GetDouble(0);
+            cnn.Close();
+
+            Saldo.Text = $"{saldorefresh}{Class1.moedatipo}";
         }
     }
 }

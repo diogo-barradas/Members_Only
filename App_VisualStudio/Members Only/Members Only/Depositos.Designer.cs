@@ -43,7 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.Saldo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -76,6 +75,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(766, 488);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
             // tempo
             // 
@@ -96,6 +96,7 @@
             this.label4.Size = new System.Drawing.Size(100, 12);
             this.label4.TabIndex = 19;
             this.label4.Text = "* Valor a Depositar";
+            this.label4.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
             // label5
             // 
@@ -107,6 +108,7 @@
             this.label5.Size = new System.Drawing.Size(142, 16);
             this.label5.TabIndex = 18;
             this.label5.Text = "Digite a Descrição ";
+            this.label5.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
             // textBox3
             // 
@@ -122,6 +124,7 @@
             this.textBox3.Text = " ex.Depósito";
             this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
             this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
+            this.textBox3.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
             // panel8
             // 
@@ -130,6 +133,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(136, 23);
             this.panel8.TabIndex = 7;
+            this.panel8.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
             // dataGridView1
             // 
@@ -148,7 +152,7 @@
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -158,7 +162,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Gray;
@@ -172,7 +176,7 @@
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.Control;
@@ -181,6 +185,7 @@
             this.dataGridView1.RowHeadersWidth = 20;
             this.dataGridView1.Size = new System.Drawing.Size(742, 275);
             this.dataGridView1.TabIndex = 14;
+            this.dataGridView1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
             // button1
             // 
@@ -195,6 +200,7 @@
             this.button1.Text = "Depositar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
             // label2
             // 
@@ -206,6 +212,7 @@
             this.label2.Size = new System.Drawing.Size(94, 16);
             this.label2.TabIndex = 11;
             this.label2.Text = "Saldo Atual ";
+            this.label2.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
             // label1
             // 
@@ -217,6 +224,7 @@
             this.label1.Size = new System.Drawing.Size(104, 16);
             this.label1.TabIndex = 10;
             this.label1.Text = "Digite o valor";
+            this.label1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
             // textBox1
             // 
@@ -233,27 +241,18 @@
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
+            this.textBox1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.pictureBox9);
             this.panel2.Controls.Add(this.Saldo);
             this.panel2.Location = new System.Drawing.Point(520, 87);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(162, 23);
             this.panel2.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tw Cen MT", 15F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(109, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 23);
-            this.label3.TabIndex = 14;
+            this.panel2.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
             // pictureBox9
             // 
@@ -324,7 +323,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox3;

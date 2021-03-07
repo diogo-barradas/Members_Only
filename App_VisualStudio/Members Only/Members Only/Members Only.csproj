@@ -66,8 +66,8 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Google.Protobuf, Version=3.14.0.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
-      <HintPath>..\packages\Google.Protobuf.3.14.0\lib\net45\Google.Protobuf.dll</HintPath>
+    <Reference Include="Google.Protobuf, Version=3.15.5.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.15.5\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
@@ -418,12 +418,6 @@
     <None Include="Resources\admin_admin.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\exitfinal.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\exitfinal1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\FecharFinal1.png" />
   </ItemGroup>
   <ItemGroup>
@@ -502,19 +496,7 @@
     <None Include="Resources\visa.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\adicionarcartao.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\trocar_cartao.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cartao_exemplo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cartao_exemplo2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cartao_exemplo3.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user1 %281%29.jpg" />

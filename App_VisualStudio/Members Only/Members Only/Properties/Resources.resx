@@ -124,9 +124,6 @@
   <data name="FecharFinal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FecharFinal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="adicionarcartao" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\adicionarcartao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="MaximizarFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaximizarFinal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -226,9 +223,6 @@
   <data name="Transferir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Transferir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cartao_exemplo3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cartao_exemplo3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="menu_libra" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu_libra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -238,9 +232,6 @@
   <data name="facebook" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\facebook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cartao_exemplo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cartao_exemplo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="MinimizarFinal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MinimizarFinal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -249,9 +240,6 @@
   </data>
   <data name="icons8_eye_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-eye-15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cartao_exemplo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cartao_exemplo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="menu_transferencias" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu_transferencias.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -282,9 +270,6 @@
   </data>
   <data name="menu_dollar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu_dollar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="exitfinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exitfinal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FecharFinal3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FecharFinal3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -345,9 +330,6 @@
   </data>
   <data name="admin_utilizadores" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\admin_utilizadores.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="exitfinal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exitfinal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Euro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Euro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

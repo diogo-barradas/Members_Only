@@ -22,8 +22,69 @@ namespace Members_Only
 
         private void Sair_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Tem a certeza que deseja sair da aplicação?", "Fechar Bank$Acc", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Tem a certeza que deseja sair da aplicação?", "Fechar Members Only", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                if (Class1.moedatipo == "$") // Dólares Para Euros
+                {
+                    connection.Open();
+                    MySqlCommand commmand = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
+                    MySqlDataReader reaader = commmand.ExecuteReader();
+                    reaader.Read();
+                    double dolaretoeuro = reaader.GetDouble(0);
+                    connection.Close();
+
+                    double eurodolar = (dolaretoeuro * 0.8392); // valor de 1 dolar em euros
+                    double saldonovo = Math.Round(eurodolar, 2);
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter();
+                    try
+                    {
+                        connection.Open();
+                        adapter.UpdateCommand = connection.CreateCommand();
+                        adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = @Saldo WHERE (ID = {Class1.iduser})");
+                        adapter.UpdateCommand.Parameters.AddWithValue("@Saldo", saldonovo);
+                        adapter.UpdateCommand.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Notificação");
+                    }
+                    MessageBox.Show("O dinheiro foi atualizado para euros!");
+                }
+                else if (Class1.moedatipo == "£") //Libras para Euros
+                {
+                    connection.Open();
+                    MySqlCommand commmand = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
+                    MySqlDataReader reaader = commmand.ExecuteReader();
+                    reaader.Read();
+                    double libratoeuro = reaader.GetDouble(0);
+                    connection.Close();
+
+                    double eurolibra = (libratoeuro * 1.1612); // valor de 1 libra em euros
+                    double saldonovo = Math.Round(eurolibra, 2);
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter();
+                    try
+                    {
+                        connection.Open();
+                        adapter.UpdateCommand = connection.CreateCommand();
+                        adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = @Saldo WHERE (ID = {Class1.iduser})");
+                        adapter.UpdateCommand.Parameters.AddWithValue("@Saldo", saldonovo);
+                        adapter.UpdateCommand.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Notificação");
+                    }
+                    MessageBox.Show("O dinheiro foi atualizado para euros!");
+                }
+                else
+                {
+                    //não faz nada
+                }
+                Class1.moedatipo = "€";
                 Application.Exit();
             }
         }
@@ -32,11 +93,73 @@ namespace Members_Only
         {
             if (MessageBox.Show("Tem a certeza que deseja terminar sessão?", "Terminar Sessão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                if (Class1.moedatipo == "$") // Dólares Para Euros
+                {
+                    connection.Open();
+                    MySqlCommand commmand = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
+                    MySqlDataReader reaader = commmand.ExecuteReader();
+                    reaader.Read();
+                    double dolaretoeuro = reaader.GetDouble(0);
+                    connection.Close();
+
+                    double eurodolar = (dolaretoeuro * 0.8392); // valor de 1 dolar em euros
+                    double saldonovo = Math.Round(eurodolar, 2);
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter();
+                    try
+                    {
+                        connection.Open();
+                        adapter.UpdateCommand = connection.CreateCommand();
+                        adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = @Saldo WHERE (ID = {Class1.iduser})");
+                        adapter.UpdateCommand.Parameters.AddWithValue("@Saldo", saldonovo);
+                        adapter.UpdateCommand.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Notificação");
+                    }
+                    MessageBox.Show("O dinheiro foi atualizado para euros!");
+                }
+                else if (Class1.moedatipo == "£") //Libras para Euros
+                {
+                    connection.Open();
+                    MySqlCommand commmand = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
+                    MySqlDataReader reaader = commmand.ExecuteReader();
+                    reaader.Read();
+                    double libratoeuro = reaader.GetDouble(0);
+                    connection.Close();
+
+                    double eurolibra = (libratoeuro * 1.1612); // valor de 1 libra em euros
+                    double saldonovo = Math.Round(eurolibra, 2);
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter();
+                    try
+                    {
+                        connection.Open();
+                        adapter.UpdateCommand = connection.CreateCommand();
+                        adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = @Saldo WHERE (ID = {Class1.iduser})");
+                        adapter.UpdateCommand.Parameters.AddWithValue("@Saldo", saldonovo);
+                        adapter.UpdateCommand.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Notificação");
+                    }
+                    MessageBox.Show("O dinheiro foi atualizado para euros!");
+                }
+                else
+                {
+                    //não faz nada
+                }
+                Class1.moedatipo = "€";
+
                 this.Hide();
+                // fazer fechar o por baixo -> BUGGGGGGGGGGGGGG
                 Login login = new Login();
                 login.ShowDialog();
             }
-
         }
 
         private void Adicionar_Click(object sender, EventArgs e)
