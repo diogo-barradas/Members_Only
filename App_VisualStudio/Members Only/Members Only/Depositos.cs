@@ -16,7 +16,7 @@ namespace Members_Only
             tempo.Visible = false;
 
             cnn.Open();
-            string bddepositos = $"SELECT Descriçao, Hora, Valor FROM depositos WHERE (ID = {Class1.iduser})";
+            string bddepositos = $"SELECT Descriçao, Valor FROM depositos WHERE (ID = {Class1.iduser})";
             MySqlCommand cmd = new MySqlCommand(bddepositos, cnn);
             MySqlDataAdapter antiga = new MySqlDataAdapter(cmd);
             DataTable table = new DataTable();
@@ -70,6 +70,8 @@ namespace Members_Only
                     double addvalor = double.Parse(textBox1.Text);
                     if (addvalor <= 0)
                     {
+                        textBox1.Text = " Montante";
+                        textBox3.Text = " ex.Depósito";
                         MessageBox.Show("Introduza um valor válido");
                     }
                     else
@@ -89,6 +91,8 @@ namespace Members_Only
                         }
                         catch (Exception ex)
                         {
+                            textBox1.Text = " Montante";
+                            textBox3.Text = " ex.Depósito";
                             MessageBox.Show(ex.Message, "Notificação");
                         }
 
@@ -104,7 +108,7 @@ namespace Members_Only
                         comando.ExecuteNonQuery();
 
                         //atualizar o dataGrid
-                        string bddepositos = $"SELECT Descriçao, Hora, Valor FROM depositos WHERE (ID = {Class1.iduser})";
+                        string bddepositos = $"SELECT Descriçao, Valor FROM depositos WHERE (ID = {Class1.iduser})";
                         MySqlCommand cmd = new MySqlCommand(bddepositos, cnn);
                         MySqlDataAdapter nova = new MySqlDataAdapter(cmd);
                         DataTable table = new DataTable();
@@ -118,6 +122,8 @@ namespace Members_Only
             }
             catch (Exception)
             {
+                textBox1.Text = " Montante";
+                textBox3.Text = " ex.Depósito";
                 MessageBox.Show("Digite somente numeros!");
             }
         }

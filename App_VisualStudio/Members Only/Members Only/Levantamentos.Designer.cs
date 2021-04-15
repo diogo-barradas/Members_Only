@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Levantamentos));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tempo = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -298,6 +299,7 @@
             this.ClientSize = new System.Drawing.Size(766, 488);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Levantamentos";
             this.Opacity = 0.1D;
             this.Text = "Depositos";

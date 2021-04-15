@@ -16,7 +16,7 @@ namespace Members_Only
             tempo.Visible = false;
 
             cnn.Open();
-            string bdlevantamentos = $"SELECT Descriçao, Hora, Valor FROM levantamentos WHERE (ID = {Class1.iduser})";
+            string bdlevantamentos = $"SELECT Descriçao, Valor FROM levantamentos WHERE (ID = {Class1.iduser})";
             MySqlCommand cmd = new MySqlCommand(bdlevantamentos, cnn);
             MySqlDataAdapter antiga = new MySqlDataAdapter(cmd);
             DataTable table = new DataTable();
@@ -70,12 +70,16 @@ namespace Members_Only
                     double retirarvalor = double.Parse(textBox1.Text);
                     if (retirarvalor <= 0)
                     {
+                        textBox1.Text = " Montante";
+                        textBox3.Text = " ex.Levantamentos";
                         MessageBox.Show("Introduza um valor válido");
                     }
                     else
                     {
                         if (retirarvalor > _saldo)
                         {
+                            textBox1.Text = " Montante";
+                            textBox3.Text = " ex.Levantamentos";
                             MessageBox.Show("Você não têm fundos");
                         }
                         else
@@ -95,6 +99,8 @@ namespace Members_Only
                             }
                             catch (Exception ex)
                             {
+                                textBox1.Text = " Montante";
+                                textBox3.Text = " ex.Levantamentos";
                                 MessageBox.Show(ex.Message, "Notificação");
                             }
 
@@ -110,7 +116,7 @@ namespace Members_Only
                             comando.ExecuteNonQuery();
 
                             //atualizar o dataGrid
-                            string bdlevantar = $"SELECT Descriçao, Hora, Valor FROM levantamentos WHERE (ID = {Class1.iduser})";
+                            string bdlevantar = $"SELECT Descriçao, Valor FROM levantamentos WHERE (ID = {Class1.iduser})";
                             MySqlCommand cmd = new MySqlCommand(bdlevantar, cnn);
                             MySqlDataAdapter nova = new MySqlDataAdapter(cmd);
                             DataTable table = new DataTable();
@@ -125,6 +131,8 @@ namespace Members_Only
             }
             catch (Exception)
             {
+                textBox1.Text = " Montante";
+                textBox3.Text = " ex.Levantamentos";
                 MessageBox.Show("Digite somente numeros!");
             }
         }

@@ -17,7 +17,7 @@ namespace Members_Only
             tempo.Visible = false;
 
             cnn.Open();
-            string bdtranferencias = $"SELECT Descriçao, Hora, Valor, idDestinatario FROM transferencias WHERE (ID = {Class1.iduser})";
+            string bdtranferencias = $"SELECT Descriçao, Valor FROM transferencias WHERE (ID = {Class1.iduser})";
             MySqlCommand cmd = new MySqlCommand(bdtranferencias, cnn);
             MySqlDataAdapter antiga = new MySqlDataAdapter(cmd);
             DataTable table = new DataTable();
@@ -73,12 +73,18 @@ namespace Members_Only
                     double transferirvalor = double.Parse(textBox1.Text);
                     if (transferirvalor <= 0)
                     {
+                        textBox1.Text = " Montante";
+                        textBox3.Text = " ex.Transferências";
+                        textBox2.Text = " ID Destinatário";
                         MessageBox.Show("Introduza um valor válido");
                     }
                     else
                     {
                         if (transferirvalor > _saldo)
                         {
+                            textBox1.Text = " Montante";
+                            textBox3.Text = " ex.Transferências";
+                            textBox2.Text = " ID Destinatário";
                             MessageBox.Show("Você não têm fundos");
                         }
                         else
@@ -86,11 +92,17 @@ namespace Members_Only
                             int _iddestino = Convert.ToInt32(textBox2.Text);
                             if (_iddestino == Class1.iduser)
                             {
+                                textBox1.Text = " Montante";
+                                textBox3.Text = " ex.Transferências";
+                                textBox2.Text = " ID Destinatário";
                                 MessageBox.Show("Você não pode transferir para si mesmo!");
                             }
                             else if (_iddestino == 1)
                             {
-                                MessageBox.Show("Você não pode transferir para o admin!");
+                                textBox1.Text = " Montante";
+                                textBox3.Text = " ex.Transferências";
+                                textBox2.Text = " ID Destinatário";
+                                MessageBox.Show("Você não pode transferir para este utilizador!");
                             }
                             else
                             {
@@ -133,7 +145,7 @@ namespace Members_Only
                                         comando.ExecuteNonQuery();
 
                                         //atualizar o dataGrid
-                                        string bdtranferencias = $"SELECT Descriçao, Hora, Valor, idDestinatario FROM transferencias WHERE (ID = {Class1.iduser})";
+                                        string bdtranferencias = $"SELECT  Descriçao, Valor FROM transferencias WHERE (ID = {Class1.iduser})";
                                         MySqlCommand cmd = new MySqlCommand(bdtranferencias, cnn);
                                         MySqlDataAdapter nova = new MySqlDataAdapter(cmd);
                                         DataTable table = new DataTable();
@@ -146,12 +158,18 @@ namespace Members_Only
                                     }
                                     else
                                     {
+                                        textBox1.Text = " Montante";
+                                        textBox3.Text = " ex.Transferências";
+                                        textBox2.Text = " ID Destinatário";
                                         MessageBox.Show("Não existe um utilizador com este ID!");
                                     }
 
                                 }
                                 catch (Exception ex)
                                 {
+                                    textBox1.Text = " Montante";
+                                    textBox3.Text = " ex.Transferências";
+                                    textBox2.Text = " ID Destinatário";
                                     MessageBox.Show(ex.Message, "Notificação");
                                 }
                                 finally
@@ -165,10 +183,16 @@ namespace Members_Only
             }
             catch (MySqlException ex)
             {
+                textBox1.Text = " Montante";
+                textBox3.Text = " ex.Transferências";
+                textBox2.Text = " ID Destinatário";
                 MessageBox.Show(ex.Message, "Notificação");
             }
             catch (Exception)
             {
+                textBox1.Text = " Montante";
+                textBox3.Text = " ex.Transferências";
+                textBox2.Text = " ID Destinatário";
                 MessageBox.Show("Digite somente numeros!");
             }
         }

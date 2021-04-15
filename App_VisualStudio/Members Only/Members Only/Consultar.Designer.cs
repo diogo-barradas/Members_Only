@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consultar));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -73,7 +74,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 25);
             this.button1.TabIndex = 19;
-            this.button1.Text = "Depositos";
+            this.button1.Text = "Depósitos";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -107,7 +108,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(123, 25);
             this.button3.TabIndex = 18;
-            this.button3.Text = "Transferencias";
+            this.button3.Text = "Transferências";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -175,6 +176,7 @@
             this.ClientSize = new System.Drawing.Size(766, 488);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Consultar";
             this.Text = "Consultar";
             this.panel1.ResumeLayout(false);

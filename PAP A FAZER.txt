@@ -4,7 +4,7 @@
 
 
 
-	-> melhorar o dashboard com umas cenas para gerir os cartoes, estilo novo form so para criar cartão
+	-> melhorar o dashboard seguir o exemplo do google e tentar meter redondinho 
 	
 
 
@@ -18,18 +18,4 @@
 
 
 	Fazer 
-	      -> ENCRIPTAR PASSWORD NA BASE DE DADOS
-	
-	      -> Arranjar um logo bonito e meter icon em cada form   
-
-
-
-
-
-
-
-	-> IDEIA - METER O CONSULTAR COM HORA E TUDO ENQUANTO QUE NO MENU E DEPOISTIOS SO VALOR E DESCRIAÇAO MAIS NADA
-					ESPECIE CONSULTAR COM TODOS OS DADOS E O RESTO NAO
-
-
-	FAZER O ROUND-MATH UMA CASA NOS DEPOSTIOS E TRANFERENCIAS
+	     -> ENCRIPTAR PASSWORD NA BASE DE DADOS
