@@ -233,6 +233,16 @@ namespace Members_Only.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exnot {
+            get {
+                object obj = ResourceManager.GetObject("exnot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap eye {
             get {
                 object obj = ResourceManager.GetObject("eye", resourceCulture);
@@ -666,6 +676,16 @@ namespace Members_Only.Properties {
         internal static System.Drawing.Bitmap nariz_vermelho {
             get {
                 object obj = ResourceManager.GetObject("nariz_vermelho", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nottificacao {
+            get {
+                object obj = ResourceManager.GetObject("nottificacao", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

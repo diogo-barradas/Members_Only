@@ -136,17 +136,17 @@
   <data name="login_email" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_email.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logo Members Only" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logo Members Only.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Teste2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Teste2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menu_donativos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu_donativos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Logo Members Only" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo Members Only.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="menu_moeda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu_moeda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FecharFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FecharFinal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="menu_depositar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu_depositar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,11 +160,11 @@
   <data name="closefinal5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\closefinal5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="trocar_cartao" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trocar_cartao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="admin_levantamentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\admin_levantamentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nottificacao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nottificacao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="registo_image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\registo_image.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -195,6 +195,9 @@
   </data>
   <data name="splashscreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\splashscreen.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="menu_donativos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_donativos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="admin_depositos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\admin_depositos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -346,13 +349,16 @@
   <data name="Euro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Euro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FecharFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FecharFinal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Logotipo Members Only" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logotipo Members Only.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="trocar_cartao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trocar_cartao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_exchange_80" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-exchange-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logotipo Members Only" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logotipo Members Only.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="exnot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exnot.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
