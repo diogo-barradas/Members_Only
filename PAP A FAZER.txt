@@ -2,8 +2,6 @@
 	-----------------------> acabar o website de apresentaçao <---------------
 
 
-
-
 	-> melhorar o dashboard seguir o exemplo do google e tentar meter redondinho 
 	
 
@@ -18,4 +16,5 @@
 
 
 	Fazer 
+
 	     -> ENCRIPTAR PASSWORD NA BASE DE DADOS
