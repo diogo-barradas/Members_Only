@@ -13,6 +13,7 @@ namespace Members_Only
 
         MySqlConnection connection = new MySqlConnection(@"server=127.0.0.1;uid=root;database=members_only");
         private string _username;
+        private int userexemplo1, userexemplo2, userexemplo3;
 
         public Menu()
         {
@@ -41,6 +42,46 @@ namespace Members_Only
             label_nome.Text = $"Nome: {_username}";
             label_id.Text = $"ID: {Class1.iduser}";
             label_saldo.Text = $"Saldo: {saldo}{Class1.moedatipo}";
+
+            Random rnd = new Random();
+            do
+            {
+                // 3 utilizadores random da base de dados
+                 userexemplo1 = rnd.Next(2, 10);
+                 userexemplo2 = rnd.Next(2, 10);
+                 userexemplo3 = rnd.Next(2, 10);
+            }
+            while (userexemplo1 == userexemplo2 || userexemplo2 == userexemplo3 || userexemplo1 == userexemplo3 || userexemplo1 == Class1.iduser || userexemplo2 == Class1.iduser || userexemplo3 == Class1.iduser);
+            
+            connection.Open();
+            MySqlCommand commmmand = new MySqlCommand($"SELECT Username,Email FROM registo WHERE(ID = {userexemplo1})", connection);
+            MySqlDataReader readeeeer = commmmand.ExecuteReader();
+            readeeeer.Read();
+            string nomeexemplo1 = readeeeer.GetString(0);
+            string emailexemplo1 = readeeeer.GetString(1);
+            label5.Text = $"{nomeexemplo1}";
+            label6.Text = $"{emailexemplo1}";
+            connection.Close();
+
+            connection.Open();
+            MySqlCommand com = new MySqlCommand($"SELECT Username,Email FROM registo WHERE(ID = {userexemplo2})", connection);
+            MySqlDataReader rae = com.ExecuteReader();
+            rae.Read();
+            string nomeexemplo2 = rae.GetString(0);
+            string emailexemplo2 = rae.GetString(1);
+            label7.Text = $"{nomeexemplo2}";
+            label8.Text = $"{emailexemplo2}";
+            connection.Close();
+
+            connection.Open();
+            MySqlCommand coma = new MySqlCommand($"SELECT Username,Email FROM registo WHERE(ID = {userexemplo3})", connection);
+            MySqlDataReader rea = coma.ExecuteReader();
+            rea.Read();
+            string nomeexemplo3 = rea.GetString(0);
+            string emailexemplo3 = rea.GetString(1);
+            label9.Text = $"{emailexemplo3}";
+            label10.Text = $"{nomeexemplo3}";
+            connection.Close();
         }
 
         private void button9_MouseClick(object sender, MouseEventArgs e)

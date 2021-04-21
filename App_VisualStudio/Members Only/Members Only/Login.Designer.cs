@@ -192,7 +192,7 @@
             this.button1.Location = new System.Drawing.Point(239, 296);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 40);
-            this.button1.TabIndex = 8;
+            this.button1.TabIndex = 1;
             this.button1.Text = "Criar conta";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -224,7 +224,7 @@
             this.checkBox1.Location = new System.Drawing.Point(345, 215);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(27, 15);
-            this.checkBox1.TabIndex = 6;
+            this.checkBox1.TabIndex = 0;
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
@@ -254,7 +254,7 @@
             this.button8.Location = new System.Drawing.Point(84, 296);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(140, 40);
-            this.button8.TabIndex = 3;
+            this.button8.TabIndex = 1;
             this.button8.Text = "Iniciar sessão";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -269,7 +269,7 @@
             this.label3.Location = new System.Drawing.Point(86, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(292, 41);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Members Only";
             // 
             // textBox1
@@ -283,8 +283,7 @@
             this.textBox1.Location = new System.Drawing.Point(114, 152);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(255, 16);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TabStop = false;
+            this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Digite o seu ID";
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -302,8 +301,7 @@
             this.textBox2.Location = new System.Drawing.Point(114, 215);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(255, 16);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.TabStop = false;
+            this.textBox2.TabIndex = 3;
             this.textBox2.Text = "Digite o seu PIN";
             this.textBox2.UseSystemPasswordChar = true;
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);

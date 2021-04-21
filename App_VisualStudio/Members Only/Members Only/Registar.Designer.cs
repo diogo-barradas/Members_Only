@@ -77,8 +77,7 @@
             this.textBox5.Location = new System.Drawing.Point(114, 104);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(255, 16);
-            this.textBox5.TabIndex = 12;
-            this.textBox5.TabStop = false;
+            this.textBox5.TabIndex = 2;
             this.textBox5.Text = "Digite o seu nome";
             this.textBox5.Enter += new System.EventHandler(this.textBox5_Enter);
             this.textBox5.Leave += new System.EventHandler(this.textBox5_Leave);
@@ -94,8 +93,7 @@
             this.textBox4.Location = new System.Drawing.Point(114, 269);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(255, 16);
-            this.textBox4.TabIndex = 8;
-            this.textBox4.TabStop = false;
+            this.textBox4.TabIndex = 5;
             this.textBox4.Text = "Digite o seu ano de nascimento";
             this.textBox4.Enter += new System.EventHandler(this.textBox4_Enter);
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
@@ -112,8 +110,7 @@
             this.textBox3.Location = new System.Drawing.Point(114, 159);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(255, 16);
-            this.textBox3.TabIndex = 7;
-            this.textBox3.TabStop = false;
+            this.textBox3.TabIndex = 3;
             this.textBox3.Text = "Digite o seu email";
             this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
             this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
@@ -133,7 +130,7 @@
             this.button8.Location = new System.Drawing.Point(84, 382);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(140, 40);
-            this.button8.TabIndex = 3;
+            this.button8.TabIndex = 1;
             this.button8.Text = "Criar conta";
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -150,8 +147,7 @@
             this.textBox2.Location = new System.Drawing.Point(114, 324);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(255, 16);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.TabStop = false;
+            this.textBox2.TabIndex = 6;
             this.textBox2.Text = "Digite o seu PIN";
             this.textBox2.UseSystemPasswordChar = true;
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
@@ -168,8 +164,7 @@
             this.textBox1.Location = new System.Drawing.Point(114, 214);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(255, 16);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TabStop = false;
+            this.textBox1.TabIndex = 4;
             this.textBox1.Text = "Digite a sua morada";
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
@@ -273,7 +268,7 @@
             this.button1.Location = new System.Drawing.Point(239, 382);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(140, 40);
-            this.button1.TabIndex = 24;
+            this.button1.TabIndex = 1;
             this.button1.Text = "Iniciar sessão";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -393,7 +388,7 @@
             this.label3.Location = new System.Drawing.Point(86, 25);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(292, 41);
-            this.label3.TabIndex = 16;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Members Only";
             // 
             // pictureBox2
@@ -433,7 +428,7 @@
             this.checkBox1.Location = new System.Drawing.Point(345, 324);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(27, 15);
-            this.checkBox1.TabIndex = 6;
+            this.checkBox1.TabIndex = 0;
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
