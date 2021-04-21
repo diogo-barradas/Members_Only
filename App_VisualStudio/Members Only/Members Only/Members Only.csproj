@@ -348,6 +348,7 @@
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -638,6 +639,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sinoon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupaa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotodiogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fotoandre.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setaexpan.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

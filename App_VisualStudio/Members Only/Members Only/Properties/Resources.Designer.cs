@@ -323,6 +323,26 @@ namespace Members_Only.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fotoandre {
+            get {
+                object obj = ResourceManager.GetObject("fotoandre", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fotodiogo {
+            get {
+                object obj = ResourceManager.GetObject("fotodiogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_atm_80 {
             get {
                 object obj = ResourceManager.GetObject("icons8_atm_80", resourceCulture);
@@ -466,6 +486,16 @@ namespace Members_Only.Properties {
         internal static System.Drawing.Bitmap Logotipo_Members_Only {
             get {
                 object obj = ResourceManager.GetObject("Logotipo Members Only", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lupaa {
+            get {
+                object obj = ResourceManager.GetObject("lupaa", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -736,6 +766,16 @@ namespace Members_Only.Properties {
         internal static System.Drawing.Bitmap Sair {
             get {
                 object obj = ResourceManager.GetObject("Sair", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap setaexpan {
+            get {
+                object obj = ResourceManager.GetObject("setaexpan", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -525,6 +525,7 @@ namespace Members_Only
 
         private void pictureBox20_MouseClick(object sender, MouseEventArgs e)
         {
+            //abrir as Transferências
             panel1.Visible = false;
             panel4.Visible = false;
             panel3.Visible = true;

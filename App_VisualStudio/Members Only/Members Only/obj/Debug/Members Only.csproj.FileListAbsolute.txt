@@ -179,3 +179,4 @@ C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Membe
 C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.xml
 C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.xml
 C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
+C:\Users\Vasco\Documents\GitHub\Members-Only\App_VisualStudio\Members Only\Members Only\obj\Debug\Members Only.exe.licenses
