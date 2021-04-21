@@ -121,9 +121,6 @@
   <data name="menu_fechar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu_fechar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="twitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\twitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="MaximizarFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaximizarFinal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,8 +133,8 @@
   <data name="login_email" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_email.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Teste2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Teste2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Transferir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Transferir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo Members Only" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo Members Only.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,6 +148,12 @@
   <data name="menu_depositar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu_depositar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="FecharFinal2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FecharFinal2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FecharFinal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FecharFinal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="admin_transferencias" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\admin_transferencias.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,11 +163,11 @@
   <data name="closefinal5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\closefinal5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="trocar_cartao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\trocar_cartao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="admin_levantamentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\admin_levantamentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nottificacao" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nottificacao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="registo_image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\registo_image.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,8 +211,8 @@
   <data name="user (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user (5).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MaximizarFinal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MaximizarFinal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nottificacao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nottificacao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FecharFinal3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FecharFinal3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -241,9 +244,6 @@
   <data name="crescer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\crescer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mastercard" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mastercard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="facebook" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\facebook.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -253,8 +253,8 @@
   <data name="Deposito" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Deposito.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user1 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user1 (3).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MinimizarFinal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MinimizarFinal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="menu_transferencias" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu_transferencias.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,6 +271,9 @@
   <data name="admin_admin" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\admin_admin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="menu_info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MaximizarFinal3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaximizarFinal3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -279,6 +282,9 @@
   </data>
   <data name="Teste21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Teste21.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exnot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exnot.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="admin_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\admin_user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -295,17 +301,14 @@
   <data name="menu_dollar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu_dollar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="nariz_vermelho" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nariz vermelho.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="exemplo_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exemplo_user.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MinimizarFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MinimizarFinal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Transferir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Transferir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="twitter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twitter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="nova" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nova.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -313,23 +316,23 @@
   <data name="Levantar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Levantar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MinimizarFinal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MinimizarFinal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Teste2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Teste2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MinimizarFinal3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MinimizarFinal3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menu_info" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu_info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Euro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Euro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nariz_vermelho" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nariz vermelho.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FecharForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FecharForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menu_euro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu_euro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FecharFinal2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FecharFinal2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mastercard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mastercard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="login_idade" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_idade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -337,8 +340,8 @@
   <data name="Sair" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sair.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FecharFinal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FecharFinal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="menu_euro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu_euro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="paypal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\paypal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -346,19 +349,19 @@
   <data name="admin_utilizadores" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\admin_utilizadores.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Euro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Euro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MaximizarFinal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\MaximizarFinal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logotipo Members Only" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logotipo Members Only.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="trocar_cartao" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\trocar_cartao.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user1 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user1 (3).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_exchange_80" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-exchange-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="exnot" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\exnot.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sinoon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sinoon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

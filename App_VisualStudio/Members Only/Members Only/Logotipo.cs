@@ -37,7 +37,7 @@ namespace Members_Only
         {
             timer2.Enabled = true;
             progressBar1.Increment(3);
-            if (progressBar1.Value <= 34.99)
+            if (progressBar1.Value <= 43)
             {
                 Data2.Visible = true;
             }
