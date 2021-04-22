@@ -15,23 +15,26 @@ CREATE TABLE `members_only`.`registo` (
   ALTER TABLE registo ADD UNIQUE (Username);
   ALTER TABLE `members_only`.`registo` 
   ADD COLUMN `Saldo` DOUBLE NULL AFTER `Morada`;
+  ALTER TABLE `members_only`.`registo` 
+  CHANGE COLUMN `PIN` `PIN` VARCHAR(50) NOT NULL ;
 
 
-INSERT INTO `members_only`.`registo` (`ID`, `Username`, `PIN`, `Idade`, `Email`, `Morada`) VALUES ('1', 'Admin', '1234', '1995', 'admin@gmail.com', 'Santo Antonio dos Cavaleiros');
+
+INSERT INTO `members_only`.`registo` (`ID`, `Username`, `PIN`, `Idade`, `Email`, `Morada`) VALUES ('1', 'Admin', SHA1('1234'), '1995', 'admin@gmail.com', 'Santo Antonio dos Cavaleiros');
 UPDATE `members_only`.`registo` SET `Saldo` = '0' WHERE (`ID` = '1');
-INSERT INTO `members_only`.`registo` (`ID`, `Username`, `PIN`, `Idade`, `Email`, `Morada`) VALUES ('2', 'Diogo Barradas', '1234', '2002', 'diogobarradas1@gmail.com', 'Santo Antonio dos Cavaleiros');
+INSERT INTO `members_only`.`registo` (`ID`, `Username`, `PIN`, `Idade`, `Email`, `Morada`) VALUES ('2', 'Diogo Barradas', SHA1('1234'), '2002', 'diogobarradas1@gmail.com', 'Santo Antonio dos Cavaleiros');
 UPDATE `members_only`.`registo` SET `Saldo` = '0' WHERE (`ID` = '2');
-INSERT INTO `members_only`.`registo` (`ID`, `Username`, `PIN`, `Idade`, `Email`, `Morada`) VALUES ('3', 'Andre Costa', '1234', '2001', 'kpop@gmail.com', 'Arroja Odivelas');
+INSERT INTO `members_only`.`registo` (`ID`, `Username`, `PIN`, `Idade`, `Email`, `Morada`) VALUES ('3', 'Andre Costa', SHA1('1234'), '2001', 'kpop@gmail.com', 'Arroja Odivelas');
 UPDATE `members_only`.`registo` SET `Saldo` = '0' WHERE (`ID` = '3');
-INSERT INTO `members_only`.`registo` (`ID`, `Username`, `PIN`, `Idade`, `Email`, `Morada`) VALUES ('4', 'Antonio Varandas', '1234', '1970', 'antonio@yahoo.com', 'Alameda');
+INSERT INTO `members_only`.`registo` (`ID`, `Username`, `PIN`, `Idade`, `Email`, `Morada`) VALUES ('4', 'Antonio Varandas', SHA1('1234'), '1970', 'antonio@yahoo.com', 'Alameda');
 UPDATE `members_only`.`registo` SET `Saldo` = '0' WHERE (`ID` = '4');
-INSERT INTO `members_only`.`registo` (`ID`, `Username`, `PIN`, `Idade`, `Email`, `Morada`) VALUES ('5', 'Bruno Carvalho', '1a2b', '1950', 'brunocarva@sapo.pt', 'Belas Sintra');
+INSERT INTO `members_only`.`registo` (`ID`, `Username`, `PIN`, `Idade`, `Email`, `Morada`) VALUES ('5', 'Bruno Carvalho', SHA1('1a2b'), '1950', 'brunocarva@sapo.pt', 'Belas Sintra');
 UPDATE `members_only`.`registo` SET `Saldo` = '0' WHERE (`ID` = '5');
-INSERT INTO `members_only`.`registo` (`ID`, `Username`, `PIN`, `Idade`, `Email`, `Morada`) VALUES ('6', 'Igor Franscisco', 'abcd', '2000', 'Monkey@hotmail.com', 'Quinta do Conde');
+INSERT INTO `members_only`.`registo` (`ID`, `Username`, `PIN`, `Idade`, `Email`, `Morada`) VALUES ('6', 'Igor Franscisco', SHA1('abcd'), '2000', 'Monkey@hotmail.com', 'Quinta do Conde');
 UPDATE `members_only`.`registo` SET `Saldo` = '0' WHERE (`ID` = '6');
-INSERT INTO `members_only`.`registo` (`ID`, `Username`, `PIN`, `Idade`, `Email`, `Morada`) VALUES ('7', 'Daniel Adrião', '1234', '2003', 'danieladriao@gmail.com', 'Benfica Lisboa');
+INSERT INTO `members_only`.`registo` (`ID`, `Username`, `PIN`, `Idade`, `Email`, `Morada`) VALUES ('7', 'Daniel Adrião', SHA1('1234'), '2003', 'danieladriao@gmail.com', 'Benfica Lisboa');
 UPDATE `members_only`.`registo` SET `Saldo` = '0' WHERE (`ID` = '7');
-INSERT INTO `members_only`.`registo` (`ID`, `Username`, `PIN`, `Idade`, `Email`, `Morada`) VALUES ('8', 'Afonso Macedo', '1234', '1999', 'afonso@bing.com', 'Margem Sul');
+INSERT INTO `members_only`.`registo` (`ID`, `Username`, `PIN`, `Idade`, `Email`, `Morada`) VALUES ('8', 'Afonso Macedo', SHA1('1234'), '1999', 'afonso@bing.com', 'Margem Sul');
 UPDATE `members_only`.`registo` SET `Saldo` = '0' WHERE (`ID` = '8');
 
 
