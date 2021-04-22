@@ -7,6 +7,8 @@ namespace Members_Only
 {
     public partial class Login : Form
     {
+        HashCode hc = new HashCode();
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -104,7 +106,8 @@ namespace Members_Only
             {
                 MySqlCommand command = new MySqlCommand("SELECT Username,ID,PIN FROM registo WHERE ID=@ID AND PIN=@PIN", connection);
                 command.Parameters.AddWithValue("@ID", textBox1.Text);
-                command.Parameters.AddWithValue("@PIN", textBox2.Text);
+                command.Parameters.AddWithValue("@PIN", hc.PassHash(textBox2.Text));
+                string verficaradmin = hc.PassHash(textBox2.Text);
 
                 try
                 {
@@ -120,7 +123,7 @@ namespace Members_Only
 
                     if (reader.Read())
                     {
-                        if (textBox1.Text == "1" && textBox2.Text == pinadmin)
+                        if (textBox1.Text == "1" && verficaradmin == pinadmin)
                         {
                             MessageBox.Show("Isto é uma área ultra secreta!");
                             this.Hide();

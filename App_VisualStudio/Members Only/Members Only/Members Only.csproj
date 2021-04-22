@@ -253,6 +253,7 @@
     <Compile Include="FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="HashCode.cs" />
     <Compile Include="Levantamentos.cs">
       <SubType>Form</SubType>
     </Compile>

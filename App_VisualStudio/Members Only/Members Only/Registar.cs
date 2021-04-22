@@ -7,6 +7,8 @@ namespace Members_Only
 {
     public partial class Registar : Form
     {
+        HashCode hc = new HashCode();
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
         (
@@ -174,7 +176,7 @@ namespace Members_Only
                             MySqlCommand command = new MySqlCommand("INSERT INTO registo(PIN, Idade, Email, Morada, Username, Saldo) VALUES(@PIN, @Idade, @Email, @Morada, @Username, 0)", connection);
 
                             command.Parameters.AddWithValue("@Username", textBox5.Text);
-                            command.Parameters.AddWithValue("@PIN", textBox2.Text);
+                            command.Parameters.AddWithValue("@PIN", hc.PassHash(textBox2.Text));
                             command.Parameters.AddWithValue("@Idade", textBox4.Text);
                             command.Parameters.AddWithValue("@Email", textBox3.Text);
                             command.Parameters.AddWithValue("@Morada", textBox1.Text);
