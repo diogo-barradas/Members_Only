@@ -75,14 +75,26 @@ CREATE TABLE `members_only`.`transferencias` (
   DROP COLUMN `idRemetente`;
   
   
+CREATE TABLE `members_only`.`imagens` (
+  `ImagemID` INT NOT NULL AUTO_INCREMENT,
+  `Imagem` LONGBLOB,
+  `ID` INT,
+  PRIMARY KEY (`ImagemID`),
+  foreign key (ID) references registo (ID)
+  );
+  
+  
+  
   SELECT * FROM registo;
   SELECT * FROM depositos;
   SELECT * FROM levantamentos;
   SELECT * FROM transferencias;
+  SELECT * FROM imagens;
   
  /*
  drop table registo; 
  drop table depositos; 
  drop table levantamentos; 
  drop table transferencias; 
+ drop table imagens;
  */  
