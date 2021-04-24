@@ -343,9 +343,29 @@ namespace Members_Only.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hihand {
+            get {
+                object obj = ResourceManager.GetObject("hihand", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_atm_80 {
             get {
                 object obj = ResourceManager.GetObject("icons8_atm_80", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_editor_de_fotografia_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-editor-de-fotografia-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -733,6 +753,16 @@ namespace Members_Only.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap overlay {
+            get {
+                object obj = ResourceManager.GetObject("overlay", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pagamento {
             get {
                 object obj = ResourceManager.GetObject("Pagamento", resourceCulture);
@@ -856,6 +886,16 @@ namespace Members_Only.Properties {
         internal static System.Drawing.Bitmap twitter {
             get {
                 object obj = ResourceManager.GetObject("twitter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap uploaaad {
+            get {
+                object obj = ResourceManager.GetObject("uploaaad", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

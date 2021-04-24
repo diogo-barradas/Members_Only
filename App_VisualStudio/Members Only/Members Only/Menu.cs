@@ -2,6 +2,8 @@
 using System.Drawing;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.IO;
+using System.Data;
 
 namespace Members_Only
 {
@@ -10,14 +12,54 @@ namespace Members_Only
         public double saldo;
         private bool dragging = false;
         private Point startPoint = new Point(0, 0);
+        private int userexemplo1, userexemplo2, userexemplo3;
 
         MySqlConnection connection = new MySqlConnection(@"server=127.0.0.1;uid=root;database=members_only");
-        private string _username;
-        private int userexemplo1, userexemplo2, userexemplo3;
+        MySqlDataAdapter da;
 
         public Menu()
         {
             InitializeComponent();
+
+            connection.Open();
+            MySqlCommand command = new MySqlCommand($"SELECT Username FROM registo WHERE(ID = {Class1.iduser})", connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+            Class1.username = reader.GetString(0);
+            connection.Close();
+
+            try
+            {
+                // caso o utilizador tenha foto 
+                connection.Open();
+                MySqlCommand xpto = new MySqlCommand($"SELECT * FROM imagens WHERE(ID = {Class1.iduser})", connection);
+                da = new MySqlDataAdapter(xpto);
+
+                DataTable table = new DataTable();
+
+                da.Fill(table);
+
+
+                byte[] idf = (byte[])table.Rows[0][1];
+
+                MemoryStream mse = new MemoryStream(idf);
+
+                pictureBox1.Image = Image.FromStream(mse);
+
+                da.Dispose();
+                connection.Close();
+            }
+            catch
+            {
+                // caso o utilizador não tenha foto
+                connection.Close();      
+                MessageBox.Show($"Caro {Class1.username} você ainda não definiu a sua imagem de perfil !!","Perfil Incompleto");
+                pictureBox1.Image = Properties.Resources.uploaaad;
+                goto SemFoto;
+            }
+
+            SemFoto:
+            label11.Text = $"Olá {Class1.username}!";
             notificacoespanel.Visible = false;
             panel3.Visible = false;
             panel1.Visible = false;
@@ -26,22 +68,14 @@ namespace Members_Only
             Class1.moedatipo = "€"; //euro é a moeda caso o user nao mude 
 
             connection.Open();
-            MySqlCommand command = new MySqlCommand($"SELECT Username FROM registo WHERE(ID = {Class1.iduser})", connection);
-            MySqlDataReader reader = command.ExecuteReader();
-            reader.Read();
-            _username = reader.GetString(0);
-            connection.Close();
-
-            connection.Open();
             MySqlCommand commmand = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
             MySqlDataReader reaader = commmand.ExecuteReader();
             reaader.Read();
             saldo = reaader.GetDouble(0);
             connection.Close();
 
-            label_nome.Text = $"Nome: {_username}";
             label_id.Text = $"ID: {Class1.iduser}";
-            label_saldo.Text = $"Saldo: {saldo}{Class1.moedatipo}";
+            label_saldo.Text = $"{saldo}{Class1.moedatipo}";
 
             Random rnd = new Random();
             do
@@ -409,6 +443,7 @@ namespace Members_Only
 
         //MDI
         private Form activeForm = null;
+
         private void openChildForm(Form childForm)
         {
             if (activeForm != null) activeForm.Close();
@@ -543,7 +578,8 @@ namespace Members_Only
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
-            pictureBox1.Image = Properties.Resources.exemplo_user2;
+            //meter um efeito para editar
+            //pictureBox1.Image = Properties.Resources.exemplo_user2;
 
             connection.Open();
             MySqlCommand commmand = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
@@ -561,7 +597,37 @@ namespace Members_Only
 
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox1.Image = Properties.Resources.exemplo_user;
+            //tirar o efeito para editar
+            //pictureBox1.Image = Properties.Resources.exemplo_user;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja alterar a sua imagem de perfil?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                OpenFileDialog opf = new OpenFileDialog();
+                opf.Filter = "Choose Image(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
+                if (opf.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox1.Image = Image.FromFile(opf.FileName);
+                }
+
+                MemoryStream ms = new MemoryStream();
+                pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
+                byte[] img = ms.ToArray();
+
+                connection.Open();
+                MySqlCommand command = new MySqlCommand("INSERT INTO imagens(Imagem, ID) VALUES(@Imagem, @ID)", connection);
+
+                command.Parameters.AddWithValue("@Imagem", img);
+                command.Parameters.AddWithValue("@ID", Class1.iduser);
+
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("A sua imagem foi guardada nos nossos registos!");
+                }
+                connection.Close();
+            }    
         }
 
         private void pictureBox20_MouseClick(object sender, MouseEventArgs e)

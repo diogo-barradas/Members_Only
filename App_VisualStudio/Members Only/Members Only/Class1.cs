@@ -16,6 +16,14 @@ namespace Members_Only
         }
         //guardar o id ao logar
 
+        private static string _username;
+        public static string username
+        {
+            get { return _username; }
+            set { _username = value; }
+        }
+        //guarda o nome do utilizador ao logar
+
         private static string _moedatipo;
         public static string moedatipo
         {
