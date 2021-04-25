@@ -148,9 +148,6 @@
   <data name="menu_moeda" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\menu_moeda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="uploaaad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\uploaaad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="FecharFinal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FecharFinal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -159,6 +156,9 @@
   </data>
   <data name="FecharFinal2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FecharFinal2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Transferir" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Transferir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="admin_transferencias" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\admin_transferencias.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,8 +253,8 @@
   <data name="moldura" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\moldura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Transferir" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Transferir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="uploaaad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\uploaaad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="overlay" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\overlay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -300,6 +300,9 @@
   </data>
   <data name="Medicos_Mundo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Medicos Mundo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="molduraa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\molduraa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Teste21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Teste21.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -376,8 +379,8 @@
   <data name="MaximizarFinal1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\MaximizarFinal1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logotipo Members Only" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logotipo Members Only.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hihand" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hihand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user1 (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user1 (3).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -385,7 +388,10 @@
   <data name="icons8_exchange_80" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-exchange-80.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hihand" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hihand.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Logotipo Members Only" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logotipo Members Only.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="moldura2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\moldura2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

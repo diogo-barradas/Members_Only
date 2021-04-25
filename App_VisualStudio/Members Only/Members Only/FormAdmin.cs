@@ -188,7 +188,7 @@ namespace Members_Only
                     MessageBox.Show("O admin não pode ser apagado!");
                 }
                 else
-                {
+                {       
                     string sql = "DELETE FROM registo WHERE ID =" + id + "";
                     alo = new MySqlCommand(sql, cnn);
                     cnn.Open();
@@ -199,6 +199,16 @@ namespace Members_Only
                         baz.DeleteCommand.CommandText = sql;
                         if (MessageBox.Show("Tem a certeza ?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                         {
+                            // elimiar as forgein keys
+                            MySqlCommand comand1 = new MySqlCommand($"DELETE FROM imagens WHERE(ID =" + id + ")", cnn);
+                            comand1.ExecuteNonQuery();
+                            MySqlCommand comand = new MySqlCommand($"DELETE FROM depositos WHERE(ID =" + id + ")", cnn);
+                            comand.ExecuteNonQuery();
+                            MySqlCommand comad = new MySqlCommand($"DELETE FROM levantamentos WHERE(ID =" + id + ")", cnn);
+                            comad.ExecuteNonQuery();
+                            MySqlCommand cmad = new MySqlCommand($"DELETE FROM transferencias WHERE(ID =" + id + ")", cnn);
+                            cmad.ExecuteNonQuery();
+
                             if (alo.ExecuteNonQuery() > 0)
                             {
                                 string bduser = $"SELECT ID,Username,Idade,Email,Morada FROM registo;";
@@ -211,9 +221,9 @@ namespace Members_Only
                             }
                         }
                     }
-                    catch (MySqlException)
+                    catch (MySqlException ez)
                     {
-                        MessageBox.Show("Para apagar este Utilizador você precisa :\n - Eliminar os seus Depósitos.\n - Eliminar os seus Levantamentos.\n - Eliminar as suas Transferências.");
+                        MessageBox.Show(ez.Message, "Notificação ");
                     }
                     catch (Exception ex)
                     {

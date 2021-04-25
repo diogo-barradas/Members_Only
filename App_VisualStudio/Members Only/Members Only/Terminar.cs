@@ -7,10 +7,12 @@ namespace Members_Only
 {
     public partial class Terminar : Form
     {
+        HashCode hc = new HashCode();
         public Terminar()
         {
             InitializeComponent();
             panel2.Visible = false;
+            textBox2.UseSystemPasswordChar = false;
         }
 
         MySqlConnection connection = new MySqlConnection(@"server=127.0.0.1;uid=root;database=members_only");
@@ -185,23 +187,20 @@ namespace Members_Only
             if (MessageBox.Show("Tem a certeza que deseja excluir permanentemente a sua conta?", "Excluir a minha Conta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 connection.Open();
-
+                MySqlCommand comand1 = new MySqlCommand($"DELETE FROM imagens WHERE(ID = {Class1.iduser})", connection);
+                comand1.ExecuteNonQuery();
                 MySqlCommand comand = new MySqlCommand($"DELETE FROM depositos WHERE(ID = {Class1.iduser})", connection);
                 comand.ExecuteNonQuery();
-
                 MySqlCommand comad = new MySqlCommand($"DELETE FROM levantamentos WHERE(ID = {Class1.iduser})", connection);
                 comad.ExecuteNonQuery();
-
                 MySqlCommand cmad = new MySqlCommand($"DELETE FROM transferencias WHERE(ID = {Class1.iduser})", connection);
                 cmad.ExecuteNonQuery();
-
                 MySqlCommand command = new MySqlCommand($"DELETE FROM registo WHERE(ID = {Class1.iduser})", connection);
                 command.ExecuteNonQuery();
-
                 connection.Close();
 
                 Thread.Sleep(700);
-                MessageBox.Show("A sua conta foi Eliminada!");
+                MessageBox.Show("A sua conta foi eliminada, vamos sentir a sua falta!");
 
                 //voltar ao login
                 this.Hide();
@@ -222,7 +221,8 @@ namespace Members_Only
 
         private void textBox2_Enter(object sender, EventArgs e)
         {
-            if (textBox2.Text == "OPIN")
+            textBox2.UseSystemPasswordChar = true;
+            if (textBox2.Text == "Digite o seu novo PIN")
             {
                 textBox2.Text = "";
             }
@@ -232,13 +232,14 @@ namespace Members_Only
         {
             if (textBox2.Text == "")
             {
-                textBox2.Text = "OPIN";
+                textBox2.Text = "Digite o seu novo PIN";
+                textBox2.UseSystemPasswordChar = false;
             }
         }
 
         private void textBox4_Enter(object sender, EventArgs e)
         {
-            if (textBox4.Text == "Idade")
+            if (textBox4.Text == "Digite a sua idade")
             {
                 textBox4.Text = "";
             }
@@ -248,13 +249,13 @@ namespace Members_Only
         {
             if (textBox4.Text == "")
             {
-                textBox4.Text = "Idade";
+                textBox4.Text = "Digite a sua idade";
             }
         }
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Morada")
+            if (textBox1.Text == "Digite a sua nova morada")
             {
                 textBox1.Text = "";
             }
@@ -264,27 +265,44 @@ namespace Members_Only
         {
             if (textBox1.Text == "")
             {
-                textBox1.Text = "Morada";
+                textBox1.Text = "Digite a sua nova morada";
             }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == true)
+            if (textBox2.Text == "Digite o seu novo PIN")
             {
-                textBox2.UseSystemPasswordChar = false;
+                //não faz nada pois não está la o pin.
             }
             else
             {
-                textBox2.UseSystemPasswordChar = true;
+                if (checkBox1.Checked == true)
+                {
+                    textBox2.UseSystemPasswordChar = false;
+                }
+                else
+                {
+                    textBox2.UseSystemPasswordChar = true;
+                }
             }
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Morada" || textBox2.Text == "OPIN" || textBox4.Text == "Idade" || textBox2.Text.Length != 4)
+            if (textBox1.Text == "Digite a sua nova morada" || textBox2.Text == "Digite o seu novo PIN" || textBox4.Text == "Digite a sua idade")
             {
-                MessageBox.Show("Todos os campos são obrigatórios!\nPIN = 4 Digitos/Letras");
+                textBox1.Text = "Digite a sua nova morada";
+                textBox2.Text = "Digite o seu novo PIN";
+                textBox4.Text = "Digite a sua idade";
+                textBox2.UseSystemPasswordChar = false;
+                MessageBox.Show("Todos os campos são obrigatórios!");    
+            }
+            else if (textBox2.Text.Length != 4)
+            {
+                textBox2.Text = "Digite o seu novo PIN";
+                textBox2.UseSystemPasswordChar = false;
+                MessageBox.Show("O seu PIN deve conter quatro digitos ou letras.");
             }
             else
             {
@@ -294,13 +312,14 @@ namespace Members_Only
                     int Idadeuser = int.Parse(textBox4.Text);
                     if (Idadeuser < 18)
                     {
-                        MessageBox.Show("A Idade minima é 18!");
+                        textBox4.Text = "Digite a sua idade";
+                        MessageBox.Show("A Idade minima é 18!");                                      
                     }
                     else
                     {
                         MySqlCommand coand = new MySqlCommand($"UPDATE registo SET Morada=@Morada, PIN=@PIN, Idade=@Idade WHERE (ID = {Class1.iduser})", connection);
                         coand.Parameters.AddWithValue("@Morada", textBox1.Text);
-                        coand.Parameters.AddWithValue("@PIN", textBox2.Text);
+                        coand.Parameters.AddWithValue("@PIN", hc.PassHash(textBox2.Text));
                         coand.Parameters.AddWithValue("@Idade", textBox4.Text);
                         coand.ExecuteNonQuery();
                         MessageBox.Show("Os seus dados foram atualizados!");
@@ -314,7 +333,11 @@ namespace Members_Only
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Reveja os seus Dados!");
+                    textBox1.Text = "Digite a sua nova morada";
+                    textBox2.Text = "Digite o seu novo PIN";
+                    textBox4.Text = "Digite a sua idade";
+                    textBox2.UseSystemPasswordChar = false;
+                    MessageBox.Show("Reveja os seus dados!");                
                 }
                 finally
                 {
@@ -325,6 +348,11 @@ namespace Members_Only
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            textBox1.Text = "Digite a sua nova morada";
+            textBox2.Text = "Digite o seu novo PIN";
+            textBox4.Text = "Digite a sua idade";
+            textBox2.UseSystemPasswordChar = false;
+
             panel2.Visible = false;
             Sessao.Visible = true;
             Sair.Visible = true;

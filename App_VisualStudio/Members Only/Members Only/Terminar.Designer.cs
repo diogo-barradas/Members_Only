@@ -123,7 +123,7 @@
             this.textBox4.Size = new System.Drawing.Size(223, 20);
             this.textBox4.TabIndex = 19;
             this.textBox4.TabStop = false;
-            this.textBox4.Text = "Idade";
+            this.textBox4.Text = "Digite a sua idade";
             this.textBox4.Enter += new System.EventHandler(this.textBox4_Enter);
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox4_KeyPress);
             this.textBox4.Leave += new System.EventHandler(this.textBox4_Leave);
@@ -157,7 +157,7 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(223, 27);
             this.button8.TabIndex = 16;
-            this.button8.Text = "Editar conta!";
+            this.button8.Text = "Editar dados";
             this.button8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
@@ -189,7 +189,7 @@
             this.textBox2.Size = new System.Drawing.Size(223, 20);
             this.textBox2.TabIndex = 14;
             this.textBox2.TabStop = false;
-            this.textBox2.Text = "OPIN";
+            this.textBox2.Text = "Digite o seu novo PIN";
             this.textBox2.UseSystemPasswordChar = true;
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
@@ -207,7 +207,7 @@
             this.textBox1.Size = new System.Drawing.Size(223, 20);
             this.textBox1.TabIndex = 13;
             this.textBox1.TabStop = false;
-            this.textBox1.Text = "Morada";
+            this.textBox1.Text = "Digite a sua nova morada";
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 

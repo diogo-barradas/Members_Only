@@ -565,6 +565,12 @@
   <ItemGroup>
     <None Include="Resources\hihand.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\molduraa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moldura2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

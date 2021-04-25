@@ -34,18 +34,11 @@ namespace Members_Only
                 connection.Open();
                 MySqlCommand xpto = new MySqlCommand($"SELECT * FROM imagens WHERE(ID = {Class1.iduser})", connection);
                 da = new MySqlDataAdapter(xpto);
-
                 DataTable table = new DataTable();
-
                 da.Fill(table);
-
-
                 byte[] idf = (byte[])table.Rows[0][1];
-
                 MemoryStream mse = new MemoryStream(idf);
-
                 pictureBox1.Image = Image.FromStream(mse);
-
                 da.Dispose();
                 connection.Close();
             }
@@ -53,8 +46,8 @@ namespace Members_Only
             {
                 // caso o utilizador não tenha foto
                 connection.Close();      
-                MessageBox.Show($"Caro {Class1.username} você ainda não definiu a sua imagem de perfil !!","Perfil Incompleto");
                 pictureBox1.Image = Properties.Resources.uploaaad;
+                MessageBox.Show($"Caro {Class1.username} você ainda não definiu a sua imagem de perfil !!", "Perfil Incompleto");
                 goto SemFoto;
             }
 
@@ -73,7 +66,6 @@ namespace Members_Only
             reaader.Read();
             saldo = reaader.GetDouble(0);
             connection.Close();
-
             label_id.Text = $"ID: {Class1.iduser}";
             label_saldo.Text = $"{saldo}{Class1.moedatipo}";
 
@@ -86,36 +78,127 @@ namespace Members_Only
                  userexemplo3 = rnd.Next(2, 10);
             }
             while (userexemplo1 == userexemplo2 || userexemplo2 == userexemplo3 || userexemplo1 == userexemplo3 || userexemplo1 == Class1.iduser || userexemplo2 == Class1.iduser || userexemplo3 == Class1.iduser);
-            
-            connection.Open();
-            MySqlCommand commmmand = new MySqlCommand($"SELECT Username,Email FROM registo WHERE(ID = {userexemplo1})", connection);
-            MySqlDataReader readeeeer = commmmand.ExecuteReader();
-            readeeeer.Read();
-            string nomeexemplo1 = readeeeer.GetString(0);
-            string emailexemplo1 = readeeeer.GetString(1);
-            label5.Text = $"{nomeexemplo1}";
-            label6.Text = $"{emailexemplo1}";
-            connection.Close();
-
-            connection.Open();
-            MySqlCommand com = new MySqlCommand($"SELECT Username,Email FROM registo WHERE(ID = {userexemplo2})", connection);
-            MySqlDataReader rae = com.ExecuteReader();
-            rae.Read();
-            string nomeexemplo2 = rae.GetString(0);
-            string emailexemplo2 = rae.GetString(1);
-            label7.Text = $"{nomeexemplo2}";
-            label8.Text = $"{emailexemplo2}";
-            connection.Close();
-
-            connection.Open();
-            MySqlCommand coma = new MySqlCommand($"SELECT Username,Email FROM registo WHERE(ID = {userexemplo3})", connection);
-            MySqlDataReader rea = coma.ExecuteReader();
-            rea.Read();
-            string nomeexemplo3 = rea.GetString(0);
-            string emailexemplo3 = rea.GetString(1);
-            label9.Text = $"{emailexemplo3}";
-            label10.Text = $"{nomeexemplo3}";
-            connection.Close();
+            //mostrar as pessoas recomendadas
+            try
+            {
+                connection.Open();
+                MySqlCommand commmmand = new MySqlCommand($"SELECT Username,Email FROM registo WHERE(ID = {userexemplo1})", connection);
+                MySqlDataReader readeeeer = commmmand.ExecuteReader();
+                readeeeer.Read();
+                string nomeexemplo1 = readeeeer.GetString(0);
+                string emailexemplo1 = readeeeer.GetString(1);
+                label5.Text = $"{nomeexemplo1}";
+                label6.Text = $"{emailexemplo1}";
+                connection.Close();
+            }
+            catch
+            {
+                connection.Close();
+                label5.Text = "sem registos";
+                label6.Text = "sem registos";
+                goto semuser1;
+            }
+            semuser1:
+            try
+            {
+                connection.Open();
+                MySqlCommand xpto1 = new MySqlCommand($"SELECT * FROM imagens WHERE(ID = {userexemplo1})", connection);
+                da = new MySqlDataAdapter(xpto1);
+                DataTable table1 = new DataTable();
+                da.Fill(table1);
+                byte[] idf1 = (byte[])table1.Rows[0][1];
+                MemoryStream mse1 = new MemoryStream(idf1);
+                pictureBox12.Image = Image.FromStream(mse1);
+                da.Dispose();
+                connection.Close();
+            }
+            catch
+            {
+                connection.Close();
+                pictureBox12.Image = Properties.Resources.uploaaad;
+                goto semfoto1;
+            }
+            semfoto1:
+            try
+            {
+                connection.Open();
+                MySqlCommand com = new MySqlCommand($"SELECT Username,Email FROM registo WHERE(ID = {userexemplo2})", connection);
+                MySqlDataReader rae = com.ExecuteReader();
+                rae.Read();
+                string nomeexemplo2 = rae.GetString(0);
+                string emailexemplo2 = rae.GetString(1);
+                label7.Text = $"{nomeexemplo2}";
+                label8.Text = $"{emailexemplo2}";
+                connection.Close();
+            }
+            catch
+            {
+                connection.Close();
+                label7.Text = "sem registos";
+                label8.Text = "sem registos";
+                goto semuser2;
+            }
+            semuser2:
+            try
+            {
+                connection.Open();
+                MySqlCommand xpto2 = new MySqlCommand($"SELECT * FROM imagens WHERE(ID = {userexemplo2})", connection);
+                da = new MySqlDataAdapter(xpto2);
+                DataTable table2 = new DataTable();
+                da.Fill(table2);
+                byte[] idf2 = (byte[])table2.Rows[0][1];
+                MemoryStream mse2 = new MemoryStream(idf2);
+                pictureBox13.Image = Image.FromStream(mse2);
+                da.Dispose();
+                connection.Close();
+            }
+            catch
+            {
+                connection.Close();
+                pictureBox13.Image = Properties.Resources.uploaaad;
+                goto semfoto2;
+            }
+            semfoto2:
+            try
+            {
+                connection.Open();
+                MySqlCommand coma = new MySqlCommand($"SELECT Username,Email FROM registo WHERE(ID = {userexemplo3})", connection);
+                MySqlDataReader rea = coma.ExecuteReader();
+                rea.Read();
+                string nomeexemplo3 = rea.GetString(0);
+                string emailexemplo3 = rea.GetString(1);
+                label9.Text = $"{emailexemplo3}";
+                label10.Text = $"{nomeexemplo3}";
+                connection.Close();
+            }
+            catch
+            {
+                connection.Close();
+                label9.Text = "sem registos";
+                label10.Text = "sem registos";
+                goto semuser3;
+            }
+            semuser3:
+            try
+            {
+                connection.Open();
+                MySqlCommand xpto3 = new MySqlCommand($"SELECT * FROM imagens WHERE(ID = {userexemplo3})", connection);
+                da = new MySqlDataAdapter(xpto3);
+                DataTable table3 = new DataTable();
+                da.Fill(table3);
+                byte[] idf3 = (byte[])table3.Rows[0][1];
+                MemoryStream mse3 = new MemoryStream(idf3);
+                pictureBox14.Image = Image.FromStream(mse3);
+                da.Dispose();
+                connection.Close();
+            }
+            catch
+            {
+                connection.Close();
+                pictureBox14.Image = Properties.Resources.uploaaad;
+                goto semfoto3;
+            }
+            semfoto3:;
         }
 
         private void button9_MouseClick(object sender, MouseEventArgs e)
@@ -556,14 +639,16 @@ namespace Members_Only
 
         private void panelChildForm_MouseHover(object sender, EventArgs e)
         {
+            Slidepanel.Height = (button1.Height - 15);
+            Slidepanel.Top = (button1.Top + 10);
+
             connection.Open();
             MySqlCommand commmand = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
             MySqlDataReader reaader = commmand.ExecuteReader();
             reaader.Read();
             saldo = reaader.GetDouble(0);
             connection.Close();
-
-            label_saldo.Text = $"Saldo: {saldo}{Class1.moedatipo}";
+            label_saldo.Text = $"{saldo}{Class1.moedatipo}";
 
             panel1.Visible = false;
             panel3.Visible = false;
@@ -587,8 +672,7 @@ namespace Members_Only
             reaader.Read();
             saldo = reaader.GetDouble(0);
             connection.Close();
-
-            label_saldo.Text = $"Saldo: {saldo}{Class1.moedatipo}";
+            label_saldo.Text = $"{saldo}{Class1.moedatipo}";
 
             panel1.Visible = false;
             panel3.Visible = false;
