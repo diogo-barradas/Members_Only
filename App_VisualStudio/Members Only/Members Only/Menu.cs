@@ -695,21 +695,43 @@ namespace Members_Only
                 {
                     pictureBox1.Image = Image.FromFile(opf.FileName);
                 }
-
                 MemoryStream ms = new MemoryStream();
                 pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
                 byte[] img = ms.ToArray();
 
                 connection.Open();
-                MySqlCommand command = new MySqlCommand("INSERT INTO imagens(Imagem, ID) VALUES(@Imagem, @ID)", connection);
-
-                command.Parameters.AddWithValue("@Imagem", img);
-                command.Parameters.AddWithValue("@ID", Class1.iduser);
-
-                if (command.ExecuteNonQuery() == 1)
+                try
                 {
-                    MessageBox.Show("A sua imagem foi guardada nos nossos registos!");
+                    MySqlCommand command1 = new MySqlCommand($"UPDATE imagens SET Imagem=@Imagem WHERE (ID = {Class1.iduser})", connection);
+                    command1.Parameters.AddWithValue("@Imagem", img);
+                    if (command1.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("A sua imagem foi alterada nos nossos registos!");
+                        goto comsucesso;
+                    }
                 }
+                catch
+                {
+                    goto insertimg;
+                }
+                insertimg:
+                try
+                {
+                    MySqlCommand command = new MySqlCommand("INSERT INTO imagens(Imagem, ID) VALUES(@Imagem, @ID)", connection);
+
+                    command.Parameters.AddWithValue("@Imagem", img);
+                    command.Parameters.AddWithValue("@ID", Class1.iduser);
+                    if (command.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("A sua imagem foi guardada nos nossos registos!");
+                        goto comsucesso;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                comsucesso:
                 connection.Close();
             }    
         }
