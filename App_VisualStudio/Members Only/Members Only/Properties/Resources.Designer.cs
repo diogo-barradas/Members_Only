@@ -543,6 +543,16 @@ namespace Members_Only.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap moldura1 {
+            get {
+                object obj = ResourceManager.GetObject("moldura1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nariz_vermelho {
             get {
                 object obj = ResourceManager.GetObject("nariz_vermelho", resourceCulture);
@@ -566,6 +576,16 @@ namespace Members_Only.Properties {
         internal static System.Drawing.Bitmap registo_image {
             get {
                 object obj = ResourceManager.GetObject("registo_image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap saldo_menu {
+            get {
+                object obj = ResourceManager.GetObject("saldo_menu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

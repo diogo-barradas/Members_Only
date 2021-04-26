@@ -460,6 +460,12 @@
   <ItemGroup>
     <None Include="Resources\Logo Members Only.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saldo_menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moldura1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -47,7 +47,6 @@ namespace Members_Only
                 // caso o utilizador não tenha foto
                 connection.Close();      
                 pictureBox1.Image = Properties.Resources.uploaaad;
-                MessageBox.Show($"Caro {Class1.username} você ainda não definiu a sua imagem de perfil !!", "Perfil Incompleto");
                 goto SemFoto;
             }
 
@@ -68,6 +67,27 @@ namespace Members_Only
             connection.Close();
             label_id.Text = $"ID: {Class1.iduser}";
             label_saldo.Text = $"{saldo}{Class1.moedatipo}";
+
+            if (label_saldo.Text.Length == 4)
+            {
+                label_saldo.Location = new Point(153, 62);
+            }
+            else if (label_saldo.Text.Length == 5)
+            {
+                label_saldo.Location = new Point(145, 62);
+            }
+            else if (label_saldo.Text.Length == 6)
+            {
+                label_saldo.Location = new Point(135, 62);
+            }
+            else if (label_saldo.Text.Length <= 3)
+            {
+                label_saldo.Location = new Point(171, 62);
+            }
+            else
+            {
+                label_saldo.Location = new Point(94, 62);
+            }
 
             Random rnd = new Random();
             do
@@ -649,6 +669,27 @@ namespace Members_Only
             saldo = reaader.GetDouble(0);
             connection.Close();
             label_saldo.Text = $"{saldo}{Class1.moedatipo}";
+            
+            if (label_saldo.Text.Length == 4)
+            {
+                label_saldo.Location = new Point(153, 62);
+            }
+            else if (label_saldo.Text.Length == 5)
+            {
+                label_saldo.Location = new Point(145, 62);
+            }
+            else if (label_saldo.Text.Length == 6)
+            {
+                label_saldo.Location = new Point(135, 62);
+            }
+            else if (label_saldo.Text.Length <= 3)
+            {
+                label_saldo.Location = new Point(171, 62);
+            }
+            else
+            {
+                label_saldo.Location = new Point(94, 62);
+            }
 
             panel1.Visible = false;
             panel3.Visible = false;
@@ -658,13 +699,13 @@ namespace Members_Only
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label_hora.Text = "Hoje:  " + DateTime.Now.ToString("HH:mm:ss, dd-MM-yyyy");
+            label_hora.Text = "" + DateTime.Now.ToString("HH:mm:ss, dd-MM-yyyy");
         }
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
             //meter um efeito para editar
-            //pictureBox1.Image = Properties.Resources.exemplo_user2;
+            label14.Visible = true;
 
             connection.Open();
             MySqlCommand commmand = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
@@ -682,7 +723,7 @@ namespace Members_Only
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
             //tirar o efeito para editar
-            //pictureBox1.Image = Properties.Resources.exemplo_user;
+            label14.Visible = false;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -718,7 +759,6 @@ namespace Members_Only
                 try
                 {
                     MySqlCommand command = new MySqlCommand("INSERT INTO imagens(Imagem, ID) VALUES(@Imagem, @ID)", connection);
-
                     command.Parameters.AddWithValue("@Imagem", img);
                     command.Parameters.AddWithValue("@ID", Class1.iduser);
                     if (command.ExecuteNonQuery() == 1)
@@ -749,7 +789,7 @@ namespace Members_Only
 
         private void pictureBox18_MouseClick(object sender, MouseEventArgs e)
         {
-            if(notificacoespanel.Visible == false)
+            if (notificacoespanel.Visible == false)
             {
                 notificacoespanel.Visible = true;
             }
