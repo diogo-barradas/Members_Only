@@ -52,16 +52,16 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.MinimizarApp = new System.Windows.Forms.PictureBox();
             this.MaximizarApp = new System.Windows.Forms.PictureBox();
             this.FecharApp = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label13 = new System.Windows.Forms.Label();
@@ -93,9 +93,9 @@
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label14 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
@@ -115,7 +115,6 @@
             this.panelChildForm.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
@@ -124,6 +123,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -153,7 +153,7 @@
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Help;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(132, 458);
+            this.pictureBox2.Location = new System.Drawing.Point(132, 457);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(20, 20);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -452,6 +452,23 @@
             this.button11.UseVisualStyleBackColor = false;
             this.button11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button11_MouseClick);
             // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Transparent;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
+            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.Location = new System.Drawing.Point(0, 41);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(200, 35);
+            this.button10.TabIndex = 1;
+            this.button10.Text = "Dólares";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.Transparent;
@@ -469,23 +486,6 @@
             this.button9.Text = "Euros";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.button9_MouseClick);
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(0, 41);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(200, 35);
-            this.button10.TabIndex = 1;
-            this.button10.Text = "Dólares";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // panel2
             // 
@@ -609,6 +609,18 @@
             this.panel5.TabIndex = 10;
             this.panel5.MouseHover += new System.EventHandler(this.panelChildForm_MouseHover);
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.DimGray;
+            this.label14.Location = new System.Drawing.Point(63, 391);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(151, 12);
+            this.label14.TabIndex = 80;
+            this.label14.Text = "Clique para editar a sua foto!";
+            this.label14.Visible = false;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -623,17 +635,6 @@
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
             this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox16.Image = global::Members_Only.Properties.Resources.moldura1;
-            this.pictureBox16.Location = new System.Drawing.Point(-42, 161);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(354, 225);
-            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox16.TabIndex = 79;
-            this.pictureBox16.TabStop = false;
             // 
             // pictureBox15
             // 
@@ -1103,6 +1104,17 @@
             this.monthCalendar1.TrailingForeColor = System.Drawing.Color.LightGray;
             this.monthCalendar1.MouseHover += new System.EventHandler(this.panelChildForm_MouseHover);
             // 
+            // pictureBox16
+            // 
+            this.pictureBox16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox16.Image = global::Members_Only.Properties.Resources.moldura1;
+            this.pictureBox16.Location = new System.Drawing.Point(-42, 161);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(354, 225);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox16.TabIndex = 79;
+            this.pictureBox16.TabStop = false;
+            // 
             // toolTip
             // 
             this.toolTip.IsBalloon = true;
@@ -1111,18 +1123,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.DimGray;
-            this.label14.Location = new System.Drawing.Point(63, 391);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(151, 12);
-            this.label14.TabIndex = 80;
-            this.label14.Text = "Clique para editar a sua foto!";
-            this.label14.Visible = false;
             // 
             // Menu
             // 
@@ -1163,7 +1163,6 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
@@ -1174,6 +1173,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.ResumeLayout(false);
 
         }

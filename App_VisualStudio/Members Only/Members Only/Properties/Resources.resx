@@ -142,9 +142,6 @@
   <data name="admin_utilizadores" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\admin_utilizadores.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FecharForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FecharForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="login_email" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\login_email.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -201,9 +198,6 @@
   </data>
   <data name="closefinal5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\closefinal5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icons8_question_mark_25" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-question-mark-25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8_eye_15" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-eye-15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -288,5 +282,11 @@
   </data>
   <data name="moldura1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\moldura1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FecharForm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FecharForm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_question_mark_25" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-question-mark-25.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

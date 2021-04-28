@@ -52,7 +52,7 @@
             this.Valor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Valor.AutoSize = true;
             this.Valor.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Valor.Location = new System.Drawing.Point(522, 39);
+            this.Valor.Location = new System.Drawing.Point(529, 24);
             this.Valor.Name = "Valor";
             this.Valor.Size = new System.Drawing.Size(0, 16);
             this.Valor.TabIndex = 6;
@@ -91,7 +91,7 @@
             this.IDdestinatario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.IDdestinatario.AutoSize = true;
             this.IDdestinatario.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IDdestinatario.Location = new System.Drawing.Point(389, 65);
+            this.IDdestinatario.Location = new System.Drawing.Point(477, 65);
             this.IDdestinatario.Name = "IDdestinatario";
             this.IDdestinatario.Size = new System.Drawing.Size(0, 16);
             this.IDdestinatario.TabIndex = 9;
@@ -101,7 +101,7 @@
             this.IDremetente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.IDremetente.AutoSize = true;
             this.IDremetente.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IDremetente.Location = new System.Drawing.Point(389, 25);
+            this.IDremetente.Location = new System.Drawing.Point(361, 66);
             this.IDremetente.Name = "IDremetente";
             this.IDremetente.Size = new System.Drawing.Size(0, 16);
             this.IDremetente.TabIndex = 10;
@@ -112,7 +112,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(522, 26);
+            this.label1.Location = new System.Drawing.Point(528, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 12);
             this.label1.TabIndex = 11;
@@ -148,7 +148,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(389, 11);
+            this.label4.Location = new System.Drawing.Point(361, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 12);
             this.label4.TabIndex = 14;
@@ -160,7 +160,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(389, 52);
+            this.label5.Location = new System.Drawing.Point(477, 52);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 12);
             this.label5.TabIndex = 15;
@@ -182,7 +182,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(445, 27);
+            this.label6.Location = new System.Drawing.Point(417, 68);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(9, 12);
             this.label6.TabIndex = 16;
@@ -193,7 +193,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(445, 67);
+            this.label7.Location = new System.Drawing.Point(533, 67);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(13, 12);
             this.label7.TabIndex = 17;
@@ -204,7 +204,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(452, 27);
+            this.label8.Location = new System.Drawing.Point(424, 68);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(0, 12);
             this.label8.TabIndex = 18;
@@ -214,7 +214,7 @@
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(454, 67);
+            this.label9.Location = new System.Drawing.Point(542, 67);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(0, 12);
             this.label9.TabIndex = 19;

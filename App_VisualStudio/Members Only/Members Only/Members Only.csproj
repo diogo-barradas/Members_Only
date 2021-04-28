@@ -353,13 +353,7 @@
     <None Include="Resources\splashscreen.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-question-mark-25.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\icons8-eye-15.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\FecharForm.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MinimizarFinal3.png" />
@@ -465,6 +459,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\moldura1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FecharForm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-question-mark-25.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
