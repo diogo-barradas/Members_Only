@@ -466,6 +466,24 @@
   <ItemGroup>
     <None Include="Resources\icons8-question-mark-25.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_descricao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_description.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositos_depo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\levantar_levnatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tranferir_tranfeir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iddestino_id.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

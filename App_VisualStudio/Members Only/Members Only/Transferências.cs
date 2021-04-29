@@ -64,7 +64,7 @@ namespace Members_Only
         {
             try
             {
-                if (textBox1.Text == " Montante" || textBox3.Text == " ex.Transferências" || textBox2.Text == " ID Destinatário")
+                if (textBox1.Text == "Valor a Transferir" || textBox3.Text == "Digite a Descrição" || textBox2.Text == "ID do Destinatário")
                 {
                     MessageBox.Show("Todos os campos são obrigatórios!");
                 }
@@ -73,18 +73,14 @@ namespace Members_Only
                     double transferirvalor = double.Parse(textBox1.Text);
                     if (transferirvalor <= 0)
                     {
-                        textBox1.Text = " Montante";
-                        textBox3.Text = " ex.Transferências";
-                        textBox2.Text = " ID Destinatário";
+                        textBox1.Text = "Valor a Transferir";
                         MessageBox.Show("Introduza um valor válido");
                     }
                     else
                     {
                         if (transferirvalor > _saldo)
                         {
-                            textBox1.Text = " Montante";
-                            textBox3.Text = " ex.Transferências";
-                            textBox2.Text = " ID Destinatário";
+                            textBox1.Text = "Valor a Transferir";
                             MessageBox.Show("Você não têm fundos");
                         }
                         else
@@ -92,16 +88,12 @@ namespace Members_Only
                             int _iddestino = Convert.ToInt32(textBox2.Text);
                             if (_iddestino == Class1.iduser)
                             {
-                                textBox1.Text = " Montante";
-                                textBox3.Text = " ex.Transferências";
-                                textBox2.Text = " ID Destinatário";
+                                textBox2.Text = "ID do Destinatário";
                                 MessageBox.Show("Você não pode transferir para si mesmo!");
                             }
                             else if (_iddestino == 1)
                             {
-                                textBox1.Text = " Montante";
-                                textBox3.Text = " ex.Transferências";
-                                textBox2.Text = " ID Destinatário";
+                                textBox2.Text = "ID do Destinatário";
                                 MessageBox.Show("Você não pode transferir para este utilizador!");
                             }
                             else
@@ -152,24 +144,22 @@ namespace Members_Only
                                         nova.Fill(table);
                                         dataGridView1.DataSource = table;
 
-                                        textBox1.Text = " Montante";
-                                        textBox3.Text = " ex.Transferências";
-                                        textBox2.Text = " ID Destinatário";
+                                        textBox1.Text = "Valor a Transferir";
+                                        textBox3.Text = "Digite a Descrição";
+                                        textBox2.Text = "ID do Destinatário";
                                     }
                                     else
                                     {
-                                        textBox1.Text = " Montante";
-                                        textBox3.Text = " ex.Transferências";
-                                        textBox2.Text = " ID Destinatário";
+                                        textBox2.Text = "ID do Destinatário";
                                         MessageBox.Show("Não existe um utilizador com este ID!");
                                     }
 
                                 }
                                 catch (Exception ex)
                                 {
-                                    textBox1.Text = " Montante";
-                                    textBox3.Text = " ex.Transferências";
-                                    textBox2.Text = " ID Destinatário";
+                                    textBox1.Text = "Valor a Transferir";
+                                    textBox3.Text = "Digite a Descrição";
+                                    textBox2.Text = "ID do Destinatário";
                                     MessageBox.Show(ex.Message, "Notificação");
                                 }
                                 finally
@@ -183,23 +173,22 @@ namespace Members_Only
             }
             catch (MySqlException ex)
             {
-                textBox1.Text = " Montante";
-                textBox3.Text = " ex.Transferências";
-                textBox2.Text = " ID Destinatário";
+                textBox1.Text = "Valor a Transferir";
+                textBox3.Text = "Digite a Descrição";
+                textBox2.Text = "ID do Destinatário";
                 MessageBox.Show(ex.Message, "Notificação");
             }
             catch (Exception)
             {
-                textBox1.Text = " Montante";
-                textBox3.Text = " ex.Transferências";
-                textBox2.Text = " ID Destinatário";
+                textBox1.Text = "Valor a Transferir";
+                textBox2.Text = "ID do Destinatário";
                 MessageBox.Show("Digite somente numeros!");
             }
         }
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text == " Montante")
+            if (textBox1.Text == "Valor a Transferir")
             {
                 textBox1.Text = "";
             }
@@ -209,13 +198,13 @@ namespace Members_Only
         {
             if (textBox1.Text == "")
             {
-                textBox1.Text = " Montante";
+                textBox1.Text = "Valor a Transferir";
             }
         }
 
         private void textBox3_Enter(object sender, EventArgs e)
         {
-            if (textBox3.Text == " ex.Transferências")
+            if (textBox3.Text == "Digite a Descrição")
             {
                 textBox3.Text = "";
             }
@@ -225,13 +214,13 @@ namespace Members_Only
         {
             if (textBox3.Text == "")
             {
-                textBox3.Text = " ex.Transferências";
+                textBox3.Text = "Digite a Descrição";
             }
         }
 
         private void textBox2_Enter(object sender, EventArgs e)
         {
-            if (textBox2.Text == " ID Destinatário")
+            if (textBox2.Text == "ID do Destinatário")
             {
                 textBox2.Text = "";
             }
@@ -241,7 +230,7 @@ namespace Members_Only
         {
             if (textBox2.Text == "")
             {
-                textBox2.Text = " ID Destinatário";
+                textBox2.Text = "ID do Destinatário";
             }
         }
 

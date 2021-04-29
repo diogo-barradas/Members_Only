@@ -36,26 +36,34 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Transferências));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panelbd = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.tempo = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.Saldo = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelbd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -72,18 +80,23 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.panelbd);
+            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.tempo);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -93,14 +106,154 @@
             this.panel1.TabIndex = 0;
             this.panel1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox5.Image = global::Members_Only.Properties.Resources.iddestino_id;
+            this.pictureBox5.Location = new System.Drawing.Point(68, 124);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox5.TabIndex = 36;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.MouseHover += new System.EventHandler(this.panel1_MouseHover);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
+            this.label4.Location = new System.Drawing.Point(189, 154);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 12);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "Destinatário";
+            this.label4.MouseHover += new System.EventHandler(this.panel1_MouseHover);
+            // 
+            // panel5
+            // 
+            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
+            this.panel5.Location = new System.Drawing.Point(65, 150);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(191, 1);
+            this.panel5.TabIndex = 34;
+            this.panel5.MouseHover += new System.EventHandler(this.panel1_MouseHover);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox4.Image = global::Members_Only.Properties.Resources.menu_description;
+            this.pictureBox4.Location = new System.Drawing.Point(68, 66);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox4.TabIndex = 33;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.MouseHover += new System.EventHandler(this.panel1_MouseHover);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
+            this.label1.Location = new System.Drawing.Point(204, 96);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 12);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Descrição";
+            this.label1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
+            this.panel3.Location = new System.Drawing.Point(65, 92);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(191, 1);
+            this.panel3.TabIndex = 31;
+            this.panel3.MouseHover += new System.EventHandler(this.panel1_MouseHover);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox3.Image = global::Members_Only.Properties.Resources.tranferir_tranfeir;
+            this.pictureBox3.Location = new System.Drawing.Point(310, 106);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 30;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseHover += new System.EventHandler(this.panel1_MouseHover);
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
+            this.panel4.Location = new System.Drawing.Point(307, 132);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(165, 1);
+            this.panel4.TabIndex = 29;
+            this.panel4.MouseHover += new System.EventHandler(this.panel1_MouseHover);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
+            this.label3.Location = new System.Drawing.Point(419, 136);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.TabIndex = 28;
+            this.label3.Text = "Montante";
+            this.label3.MouseHover += new System.EventHandler(this.panel1_MouseHover);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Copperplate Gothic Bold", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(560, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 16);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Saldo Atual ";
+            this.label2.MouseHover += new System.EventHandler(this.panel1_MouseHover);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.Animated = true;
+            this.button1.AutoRoundedCorners = true;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BorderRadius = 15;
+            this.button1.BorderThickness = 1;
+            this.button1.CheckedState.Parent = this.button1;
+            this.button1.CustomImages.Parent = this.button1;
+            this.button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
+            this.button1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.HoverState.Parent = this.button1;
+            this.button1.Location = new System.Drawing.Point(540, 133);
+            this.button1.Name = "button1";
+            this.button1.ShadowDecoration.Parent = this.button1;
+            this.button1.Size = new System.Drawing.Size(161, 33);
+            this.button1.TabIndex = 26;
+            this.button1.Text = "Transferir";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
+            // 
             // panelbd
             // 
             this.panelbd.BackColor = System.Drawing.Color.Transparent;
             this.panelbd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelbd.Controls.Add(this.dataGridView2);
-            this.panelbd.Location = new System.Drawing.Point(253, 12);
+            this.panelbd.Location = new System.Drawing.Point(270, 15);
             this.panelbd.Name = "panelbd";
-            this.panelbd.Size = new System.Drawing.Size(280, 180);
+            this.panelbd.Size = new System.Drawing.Size(248, 184);
             this.panelbd.TabIndex = 25;
             this.panelbd.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
@@ -153,7 +306,7 @@
             this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView2.RowHeadersWidth = 20;
             this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView2.Size = new System.Drawing.Size(280, 180);
+            this.dataGridView2.Size = new System.Drawing.Size(248, 184);
             this.dataGridView2.TabIndex = 26;
             // 
             // pictureBox2
@@ -162,7 +315,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Help;
             this.pictureBox2.Image = global::Members_Only.Properties.Resources.icons8_question_mark_25;
-            this.pictureBox2.Location = new System.Drawing.Point(228, 143);
+            this.pictureBox2.Location = new System.Drawing.Point(242, 129);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(14, 14);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -171,30 +324,18 @@
             this.pictureBox2.MouseLeave += new System.EventHandler(this.pictureBox2_MouseLeave);
             this.pictureBox2.MouseHover += new System.EventHandler(this.pictureBox2_MouseHover);
             // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(70, 115);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(170, 16);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Digite um Destinatário";
-            this.label6.MouseHover += new System.EventHandler(this.panel1_MouseHover);
-            // 
             // textBox2
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(73, 139);
+            this.textBox2.Location = new System.Drawing.Point(94, 128);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(173, 23);
+            this.textBox2.Size = new System.Drawing.Size(144, 15);
             this.textBox2.TabIndex = 22;
-            this.textBox2.Text = " ID Destinatário";
+            this.textBox2.Text = "ID do Destinatário";
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
@@ -203,48 +344,23 @@
             // tempo
             // 
             this.tempo.AutoSize = true;
-            this.tempo.Location = new System.Drawing.Point(302, 24);
+            this.tempo.Location = new System.Drawing.Point(333, 9);
             this.tempo.Name = "tempo";
             this.tempo.Size = new System.Drawing.Size(0, 13);
             this.tempo.TabIndex = 21;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Verdana", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(309, 141);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 12);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "* Valor a Transferir";
-            this.label4.MouseHover += new System.EventHandler(this.panel1_MouseHover);
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(70, 57);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(142, 16);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Digite a Descrição ";
-            this.label5.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
             // textBox3
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(73, 81);
+            this.textBox3.Location = new System.Drawing.Point(94, 70);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(173, 23);
+            this.textBox3.Size = new System.Drawing.Size(162, 15);
             this.textBox3.TabIndex = 17;
-            this.textBox3.Text = " ex.Transferências";
+            this.textBox3.Text = "Digite a Descrição";
             this.textBox3.Enter += new System.EventHandler(this.textBox3_Enter);
             this.textBox3.Leave += new System.EventHandler(this.textBox3_Leave);
             this.textBox3.MouseHover += new System.EventHandler(this.panel1_MouseHover);
@@ -252,7 +368,7 @@
             // panel8
             // 
             this.panel8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel8.Location = new System.Drawing.Point(516, 93);
+            this.panel8.Location = new System.Drawing.Point(533, 87);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(136, 23);
             this.panel8.TabIndex = 7;
@@ -293,7 +409,7 @@
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 200);
+            this.dataGridView1.Location = new System.Drawing.Point(54, 205);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -306,61 +422,22 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridView1.RowHeadersWidth = 20;
-            this.dataGridView1.Size = new System.Drawing.Size(742, 275);
+            this.dataGridView1.Size = new System.Drawing.Size(656, 271);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(523, 139);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Transferir";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            this.button1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(556, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 16);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Saldo Atual ";
-            this.label2.MouseHover += new System.EventHandler(this.panel1_MouseHover);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(305, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 16);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Digite o valor";
-            this.label1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(308, 117);
+            this.textBox1.Location = new System.Drawing.Point(336, 110);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(146, 23);
+            this.textBox1.Size = new System.Drawing.Size(136, 15);
             this.textBox1.TabIndex = 9;
-            this.textBox1.Text = " Montante";
+            this.textBox1.Text = "Valor a Transferir";
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
@@ -371,7 +448,7 @@
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.Controls.Add(this.pictureBox9);
             this.panel2.Controls.Add(this.Saldo);
-            this.panel2.Location = new System.Drawing.Point(516, 93);
+            this.panel2.Location = new System.Drawing.Point(533, 87);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(162, 23);
             this.panel2.TabIndex = 8;
@@ -426,6 +503,9 @@
             this.Text = "Depositos";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelbd.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -446,19 +526,24 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label Saldo;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label tempo;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panelbd;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private Guna.UI2.WinForms.Guna2Button button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel5;
     }
 }

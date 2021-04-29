@@ -143,6 +143,16 @@ namespace Members_Only.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap depositos_depo {
+            get {
+                object obj = ResourceManager.GetObject("depositos_depo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap eye {
             get {
                 object obj = ResourceManager.GetObject("eye", resourceCulture);
@@ -283,6 +293,26 @@ namespace Members_Only.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iddestino_id {
+            get {
+                object obj = ResourceManager.GetObject("iddestino_id", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap levantar_levnatar {
+            get {
+                object obj = ResourceManager.GetObject("levantar_levnatar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login_email {
             get {
                 object obj = ResourceManager.GetObject("login_email", resourceCulture);
@@ -416,6 +446,26 @@ namespace Members_Only.Properties {
         internal static System.Drawing.Bitmap menu_depositar {
             get {
                 object obj = ResourceManager.GetObject("menu_depositar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menu_descricao {
+            get {
+                object obj = ResourceManager.GetObject("menu_descricao", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menu_description {
+            get {
+                object obj = ResourceManager.GetObject("menu_description", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -616,6 +666,16 @@ namespace Members_Only.Properties {
         internal static System.Drawing.Bitmap splashscreen {
             get {
                 object obj = ResourceManager.GetObject("splashscreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tranferir_tranfeir {
+            get {
+                object obj = ResourceManager.GetObject("tranferir_tranfeir", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

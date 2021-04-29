@@ -61,7 +61,7 @@ namespace Members_Only
         {
             try
             {
-                if (textBox1.Text == " Montante" || textBox3.Text == " ex.Depósito")
+                if (textBox1.Text == "Valor a Depositar" || textBox3.Text == "Digite a Descrição")
                 {
                     MessageBox.Show("Todos os campos são obrigatórios!");
                 }
@@ -70,8 +70,7 @@ namespace Members_Only
                     double addvalor = double.Parse(textBox1.Text);
                     if (addvalor <= 0)
                     {
-                        textBox1.Text = " Montante";
-                        textBox3.Text = " ex.Depósito";
+                        textBox1.Text = "Valor a Depositar";
                         MessageBox.Show("Introduza um valor válido");
                     }
                     else
@@ -91,8 +90,8 @@ namespace Members_Only
                         }
                         catch (Exception ex)
                         {
-                            textBox1.Text = " Montante";
-                            textBox3.Text = " ex.Depósito";
+                            textBox1.Text = "Valor a Depositar";
+                            textBox3.Text = "Digite a Descrição";
                             MessageBox.Show(ex.Message, "Notificação");
                         }
 
@@ -115,22 +114,21 @@ namespace Members_Only
                         nova.Fill(table);
                         dataGridView1.DataSource = table;
                         cnn.Close();
-                        textBox1.Text = " Montante";
-                        textBox3.Text = " ex.Depósito";
+                        textBox1.Text = "Valor a Depositar";
+                        textBox3.Text = "Digite a Descrição";
                     }
                 }
             }
             catch (Exception)
             {
-                textBox1.Text = " Montante";
-                textBox3.Text = " ex.Depósito";
+                textBox1.Text = "Valor a Depositar";
                 MessageBox.Show("Digite somente numeros!");
             }
         }
 
         private void textBox1_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text == " Montante")
+            if (textBox1.Text == "Valor a Depositar")
             {
                 textBox1.Text = "";
             }
@@ -140,13 +138,13 @@ namespace Members_Only
         {
             if (textBox1.Text == "")
             {
-                textBox1.Text = " Montante";
+                textBox1.Text = "Valor a Depositar";
             }
         }
 
         private void textBox3_Enter(object sender, EventArgs e)
         {
-            if (textBox3.Text == " ex.Depósito")
+            if (textBox3.Text == "Digite a Descrição")
             {
                 textBox3.Text = "";
             }
@@ -156,7 +154,7 @@ namespace Members_Only
         {
             if (textBox3.Text == "")
             {
-                textBox3.Text = " ex.Depósito";
+                textBox3.Text = "Digite a Descrição";
             }
         }
 
