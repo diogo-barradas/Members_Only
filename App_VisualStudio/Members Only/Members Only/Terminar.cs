@@ -1,167 +1,69 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Data;
+using System.Drawing;
+using System.IO;
 using System.Threading;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Members_Only
 {
     public partial class Terminar : Form
     {
+        MySqlConnection connection = new MySqlConnection(@"server=127.0.0.1;uid=root;database=members_only");
+        MySqlDataAdapter da;
         HashCode hc = new HashCode();
+
         public Terminar()
         {
             InitializeComponent();
             panel2.Visible = false;
             textBox2.UseSystemPasswordChar = false;
-        }
 
-        MySqlConnection connection = new MySqlConnection(@"server=127.0.0.1;uid=root;database=members_only");
+            try
+            {
+                // caso o utilizador tenha foto 
+                connection.Open();
+                MySqlCommand xpto = new MySqlCommand($"SELECT * FROM imagens WHERE(ID = {Class1.iduser})", connection);
+                da = new MySqlDataAdapter(xpto);
+                DataTable table = new DataTable();
+                da.Fill(table);
+                byte[] idf = (byte[])table.Rows[0][1];
+                MemoryStream mse = new MemoryStream(idf);
+                guna2PictureBox1.Image = Image.FromStream(mse);
+                da.Dispose();
+                connection.Close();
+            }
+            catch
+            {
+                // caso o utilizador não tenha foto
+                connection.Close();
+                guna2PictureBox1.Image = Properties.Resources.uploaaad;
+                goto SemFoto;
+            }
+
+            SemFoto:
+            connection.Open();
+            MySqlCommand command = new MySqlCommand($"SELECT Idade, Email, Morada, Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+            int idadeuser = reader.GetInt32(0);
+            string emailuser = reader.GetString(1);
+            string moradauser = reader.GetString(2);
+            double saldouser = reader.GetDouble(3);
+            connection.Close();
+
+            idlabel.Text = $"ID: {Class1.iduser}";
+            nomelabel.Text = $"Nome: {Class1.username}";
+            idadelabel.Text = $"Ano de nascimento: {idadeuser}";
+            emaillabel.Text = $"E-mail: {emailuser}";
+            moradalabel.Text = $"Morada: {moradauser}";
+            saldolabel.Text = $"Saldo: {saldouser}{Class1.moedatipo}";
+        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void Sair_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Tem a certeza que deseja sair da aplicação?", "Fechar Members Only", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                if (Class1.moedatipo == "$") // Dólares Para Euros
-                {
-                    connection.Open();
-                    MySqlCommand commmand = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
-                    MySqlDataReader reaader = commmand.ExecuteReader();
-                    reaader.Read();
-                    double dolaretoeuro = reaader.GetDouble(0);
-                    connection.Close();
-
-                    double eurodolar = (dolaretoeuro * 0.8392); // valor de 1 dolar em euros
-                    double saldonovo = Math.Round(eurodolar, 2);
-
-                    MySqlDataAdapter adapter = new MySqlDataAdapter();
-                    try
-                    {
-                        connection.Open();
-                        adapter.UpdateCommand = connection.CreateCommand();
-                        adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = @Saldo WHERE (ID = {Class1.iduser})");
-                        adapter.UpdateCommand.Parameters.AddWithValue("@Saldo", saldonovo);
-                        adapter.UpdateCommand.ExecuteNonQuery();
-                        connection.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Notificação");
-                    }
-                    MessageBox.Show("O dinheiro foi atualizado para euros!");
-                }
-                else if (Class1.moedatipo == "£") //Libras para Euros
-                {
-                    connection.Open();
-                    MySqlCommand commmand = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
-                    MySqlDataReader reaader = commmand.ExecuteReader();
-                    reaader.Read();
-                    double libratoeuro = reaader.GetDouble(0);
-                    connection.Close();
-
-                    double eurolibra = (libratoeuro * 1.1612); // valor de 1 libra em euros
-                    double saldonovo = Math.Round(eurolibra, 2);
-
-                    MySqlDataAdapter adapter = new MySqlDataAdapter();
-                    try
-                    {
-                        connection.Open();
-                        adapter.UpdateCommand = connection.CreateCommand();
-                        adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = @Saldo WHERE (ID = {Class1.iduser})");
-                        adapter.UpdateCommand.Parameters.AddWithValue("@Saldo", saldonovo);
-                        adapter.UpdateCommand.ExecuteNonQuery();
-                        connection.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Notificação");
-                    }
-                    MessageBox.Show("O dinheiro foi atualizado para euros!");
-                }
-                else
-                {
-                    //não faz nada
-                }
-                Class1.moedatipo = "€";
-                Application.Exit();
-            }
-        }
-
-        private void Sessao_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Tem a certeza que deseja terminar sessão?", "Terminar Sessão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                if (Class1.moedatipo == "$") // Dólares Para Euros
-                {
-                    connection.Open();
-                    MySqlCommand commmand = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
-                    MySqlDataReader reaader = commmand.ExecuteReader();
-                    reaader.Read();
-                    double dolaretoeuro = reaader.GetDouble(0);
-                    connection.Close();
-
-                    double eurodolar = (dolaretoeuro * 0.8392); // valor de 1 dolar em euros
-                    double saldonovo = Math.Round(eurodolar, 2);
-
-                    MySqlDataAdapter adapter = new MySqlDataAdapter();
-                    try
-                    {
-                        connection.Open();
-                        adapter.UpdateCommand = connection.CreateCommand();
-                        adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = @Saldo WHERE (ID = {Class1.iduser})");
-                        adapter.UpdateCommand.Parameters.AddWithValue("@Saldo", saldonovo);
-                        adapter.UpdateCommand.ExecuteNonQuery();
-                        connection.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Notificação");
-                    }
-                    MessageBox.Show("O dinheiro foi atualizado para euros!");
-                }
-                else if (Class1.moedatipo == "£") //Libras para Euros
-                {
-                    connection.Open();
-                    MySqlCommand commmand = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
-                    MySqlDataReader reaader = commmand.ExecuteReader();
-                    reaader.Read();
-                    double libratoeuro = reaader.GetDouble(0);
-                    connection.Close();
-
-                    double eurolibra = (libratoeuro * 1.1612); // valor de 1 libra em euros
-                    double saldonovo = Math.Round(eurolibra, 2);
-
-                    MySqlDataAdapter adapter = new MySqlDataAdapter();
-                    try
-                    {
-                        connection.Open();
-                        adapter.UpdateCommand = connection.CreateCommand();
-                        adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = @Saldo WHERE (ID = {Class1.iduser})");
-                        adapter.UpdateCommand.Parameters.AddWithValue("@Saldo", saldonovo);
-                        adapter.UpdateCommand.ExecuteNonQuery();
-                        connection.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message, "Notificação");
-                    }
-                    MessageBox.Show("O dinheiro foi atualizado para euros!");
-                }
-                else
-                {
-                    //não faz nada
-                }
-                Class1.moedatipo = "€";
-
-                this.Hide();
-                // fazer fechar o por baixo -> BUGGGGGGGGGGGGGG
-                Login login = new Login();
-                login.ShowDialog();
-            }
         }
 
         private void Adicionar_Click(object sender, EventArgs e)
@@ -169,16 +71,10 @@ namespace Members_Only
             if (panel2.Visible == true)
             {
                 panel2.Visible = false;
-                Sessao.Visible = true;
-                Sair.Visible = true;
-                Eliminar.Visible = true;
             }
             else
             {
                 panel2.Visible = true;
-                Sessao.Visible = false;
-                Sair.Visible = false;
-                Eliminar.Visible = false;
             }
         }
 
@@ -237,38 +133,6 @@ namespace Members_Only
             }
         }
 
-        private void textBox4_Enter(object sender, EventArgs e)
-        {
-            if (textBox4.Text == "Digite a sua idade")
-            {
-                textBox4.Text = "";
-            }
-        }
-
-        private void textBox4_Leave(object sender, EventArgs e)
-        {
-            if (textBox4.Text == "")
-            {
-                textBox4.Text = "Digite a sua idade";
-            }
-        }
-
-        private void textBox1_Enter(object sender, EventArgs e)
-        {
-            if (textBox1.Text == "Digite a sua nova morada")
-            {
-                textBox1.Text = "";
-            }
-        }
-
-        private void textBox1_Leave(object sender, EventArgs e)
-        {
-            if (textBox1.Text == "")
-            {
-                textBox1.Text = "Digite a sua nova morada";
-            }
-        }
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (textBox2.Text == "Digite o seu novo PIN")
@@ -290,19 +154,20 @@ namespace Members_Only
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Digite a sua nova morada" || textBox2.Text == "Digite o seu novo PIN" || textBox4.Text == "Digite a sua idade")
+            if (textBox1.Text == "Digite a sua nova morada" || textBox2.Text == "Digite o seu novo PIN" || textBox4.Text == "Digite o seu ano de nascimento")
             {
-                textBox1.Text = "Digite a sua nova morada";
-                textBox2.Text = "Digite o seu novo PIN";
-                textBox4.Text = "Digite a sua idade";
-                textBox2.UseSystemPasswordChar = false;
-                MessageBox.Show("Todos os campos são obrigatórios!");    
+                MessageBox.Show("Todos os campos são obrigatórios!");
             }
             else if (textBox2.Text.Length != 4)
             {
-                textBox2.Text = "Digite o seu novo PIN";
+                textBox2.Text = "";
                 textBox2.UseSystemPasswordChar = false;
                 MessageBox.Show("O seu PIN deve conter quatro digitos ou letras.");
+            }
+            else if (textBox4.Text.Length != 4)
+            {
+                textBox4.Text = "";
+                MessageBox.Show("O seu Ano de Nascimento deve estar completo!");
             }
             else
             {
@@ -310,10 +175,10 @@ namespace Members_Only
                 try
                 {
                     int Idadeuser = int.Parse(textBox4.Text);
-                    if (Idadeuser < 18)
+                    if (Idadeuser > 2003)
                     {
-                        textBox4.Text = "Digite a sua idade";
-                        MessageBox.Show("A Idade minima é 18!");                                      
+                        textBox4.Text = "";
+                        MessageBox.Show("A Idade minima é 18!");
                     }
                     else
                     {
@@ -324,20 +189,38 @@ namespace Members_Only
                         coand.ExecuteNonQuery();
                         MessageBox.Show("Os seus dados foram atualizados!");
 
+                        textBox1.Text = "";
+                        textBox2.Text = "";
+                        textBox4.Text = "";
+                        textBox2.UseSystemPasswordChar = false;
                         panel2.Visible = false;
-                        Sessao.Visible = true;
-                        Sair.Visible = true;
                         Eliminar.Visible = true;
                         Adicionar.Visible = true;
+
+                        MySqlCommand command = new MySqlCommand($"SELECT Idade, Email, Morada, Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
+                        MySqlDataReader reader = command.ExecuteReader();
+                        reader.Read();
+                        int idadeuser = reader.GetInt32(0);
+                        string emailuser = reader.GetString(1);
+                        string moradauser = reader.GetString(2);
+                        double saldouser = reader.GetDouble(3);
+
+                        idlabel.Text = $"ID: {Class1.iduser}";
+                        nomelabel.Text = $"Nome: {Class1.username}";
+                        idadelabel.Text = $"Ano de nascimento: {idadeuser}";
+                        emaillabel.Text = $"E-mail: {emailuser}";
+                        moradalabel.Text = $"Morada: {moradauser}";
+                        saldolabel.Text = $"Saldo: {saldouser}{Class1.moedatipo}";
+
                     }
                 }
                 catch (Exception)
                 {
-                    textBox1.Text = "Digite a sua nova morada";
-                    textBox2.Text = "Digite o seu novo PIN";
-                    textBox4.Text = "Digite a sua idade";
+                    textBox1.Text = "";
+                    textBox2.Text = "";
+                    textBox4.Text = "";
                     textBox2.UseSystemPasswordChar = false;
-                    MessageBox.Show("Reveja os seus dados!");                
+                    MessageBox.Show("Reveja os seus Dados!");
                 }
                 finally
                 {
@@ -348,14 +231,12 @@ namespace Members_Only
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "Digite a sua nova morada";
-            textBox2.Text = "Digite o seu novo PIN";
-            textBox4.Text = "Digite a sua idade";
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox4.Text = ""; ;
             textBox2.UseSystemPasswordChar = false;
 
             panel2.Visible = false;
-            Sessao.Visible = true;
-            Sair.Visible = true;
             Eliminar.Visible = true;
             Adicionar.Visible = true;
         }
@@ -366,6 +247,99 @@ namespace Members_Only
             {
                 e.Handled = true;
             }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Deseja alterar a sua imagem de perfil?", "Notificação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                OpenFileDialog opf = new OpenFileDialog();
+                opf.Filter = "Choose Image(*.jpg; *.png; *.gif)|*.jpg; *.png; *.gif";
+                if (opf.ShowDialog() == DialogResult.OK)
+                {
+                    guna2PictureBox1.Image = Image.FromFile(opf.FileName);
+                }
+                MemoryStream ms = new MemoryStream();
+                guna2PictureBox1.Image.Save(ms, guna2PictureBox1.Image.RawFormat);
+                byte[] img = ms.ToArray();
+
+                connection.Open();
+                try
+                {
+                    MySqlCommand command1 = new MySqlCommand($"UPDATE imagens SET Imagem=@Imagem WHERE (ID = {Class1.iduser})", connection);
+                    command1.Parameters.AddWithValue("@Imagem", img);
+                    if (command1.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("A sua imagem foi alterada nos nossos registos!");
+                        goto comsucesso;
+                    }
+                }
+                catch
+                {
+                    goto insertimg;
+                }
+            insertimg:
+                try
+                {
+                    MySqlCommand command = new MySqlCommand("INSERT INTO imagens(Imagem, ID) VALUES(@Imagem, @ID)", connection);
+                    command.Parameters.AddWithValue("@Imagem", img);
+                    command.Parameters.AddWithValue("@ID", Class1.iduser);
+                    if (command.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("A sua imagem foi guardada nos nossos registos!");
+                        goto comsucesso;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            comsucesso:
+                connection.Close();
+            }
+        }
+
+        private void panel1_MouseHover(object sender, EventArgs e)
+        {
+            try
+            {
+                // caso o utilizador tenha foto 
+                connection.Open();
+                MySqlCommand xpto = new MySqlCommand($"SELECT * FROM imagens WHERE(ID = {Class1.iduser})", connection);
+                da = new MySqlDataAdapter(xpto);
+                DataTable table = new DataTable();
+                da.Fill(table);
+                byte[] idf = (byte[])table.Rows[0][1];
+                MemoryStream mse = new MemoryStream(idf);
+                guna2PictureBox1.Image = Image.FromStream(mse);
+                da.Dispose();
+                connection.Close();
+            }
+            catch
+            {
+                // caso o utilizador não tenha foto
+                connection.Close();
+                guna2PictureBox1.Image = Properties.Resources.uploaaad;
+                goto SemFoto;
+            }
+
+        SemFoto:
+            connection.Open();
+            MySqlCommand command = new MySqlCommand($"SELECT Idade, Email, Morada, Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            reader.Read();
+            int idadeuser = reader.GetInt32(0);
+            string emailuser = reader.GetString(1);
+            string moradauser = reader.GetString(2);
+            double saldouser = reader.GetDouble(3);
+            connection.Close();
+
+            idlabel.Text = $"ID: {Class1.iduser}";
+            nomelabel.Text = $"Nome: {Class1.username}";
+            idadelabel.Text = $"Ano de nascimento: {idadeuser}";
+            emaillabel.Text = $"E-mail: {emailuser}";
+            moradalabel.Text = $"Morada: {moradauser}";
+            saldolabel.Text = $"Saldo: {saldouser}{Class1.moedatipo}";
         }
     }
 }

@@ -1,9 +1,9 @@
-﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using System.IO;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
 
 namespace Members_Only
 {
@@ -45,12 +45,12 @@ namespace Members_Only
             catch
             {
                 // caso o utilizador não tenha foto
-                connection.Close();      
+                connection.Close();
                 pictureBox1.Image = Properties.Resources.uploaaad;
                 goto SemFoto;
             }
 
-            SemFoto:
+        SemFoto:
             label11.Text = $"Olá {Class1.username}!";
             notificacoespanel.Visible = false;
             panel3.Visible = false;
@@ -93,9 +93,9 @@ namespace Members_Only
             do
             {
                 // 3 utilizadores random da base de dados
-                 userexemplo1 = rnd.Next(2, 10);
-                 userexemplo2 = rnd.Next(2, 10);
-                 userexemplo3 = rnd.Next(2, 10);
+                userexemplo1 = rnd.Next(2, 10);
+                userexemplo2 = rnd.Next(2, 10);
+                userexemplo3 = rnd.Next(2, 10);
             }
             while (userexemplo1 == userexemplo2 || userexemplo2 == userexemplo3 || userexemplo1 == userexemplo3 || userexemplo1 == Class1.iduser || userexemplo2 == Class1.iduser || userexemplo3 == Class1.iduser);
             //mostrar as pessoas recomendadas
@@ -118,7 +118,7 @@ namespace Members_Only
                 label6.Text = "sem registos";
                 goto semuser1;
             }
-            semuser1:
+        semuser1:
             try
             {
                 connection.Open();
@@ -138,7 +138,7 @@ namespace Members_Only
                 pictureBox12.Image = Properties.Resources.uploaaad;
                 goto semfoto1;
             }
-            semfoto1:
+        semfoto1:
             try
             {
                 connection.Open();
@@ -158,7 +158,7 @@ namespace Members_Only
                 label8.Text = "sem registos";
                 goto semuser2;
             }
-            semuser2:
+        semuser2:
             try
             {
                 connection.Open();
@@ -178,7 +178,7 @@ namespace Members_Only
                 pictureBox13.Image = Properties.Resources.uploaaad;
                 goto semfoto2;
             }
-            semfoto2:
+        semfoto2:
             try
             {
                 connection.Open();
@@ -198,7 +198,7 @@ namespace Members_Only
                 label10.Text = "sem registos";
                 goto semuser3;
             }
-            semuser3:
+        semuser3:
             try
             {
                 connection.Open();
@@ -218,7 +218,7 @@ namespace Members_Only
                 pictureBox14.Image = Properties.Resources.uploaaad;
                 goto semfoto3;
             }
-            semfoto3:;
+        semfoto3:;
         }
 
         private void button9_MouseClick(object sender, MouseEventArgs e)
@@ -603,9 +603,77 @@ namespace Members_Only
         private void button7_Click(object sender, EventArgs e)
         {
             panel1.Visible = false;
-            openChildForm(new Terminar());
             Slidepanel.Height = (button7.Height - 15);
             Slidepanel.Top = (button7.Top + 10);
+
+            if (MessageBox.Show("Tem a certeza que deseja terminar sessão?", "Terminar Sessão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (Class1.moedatipo == "$") // Dólares Para Euros
+                {
+                    connection.Open();
+                    MySqlCommand commmand = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
+                    MySqlDataReader reaader = commmand.ExecuteReader();
+                    reaader.Read();
+                    double dolaretoeuro = reaader.GetDouble(0);
+                    connection.Close();
+
+                    double eurodolar = (dolaretoeuro * 0.8392); // valor de 1 dolar em euros
+                    double saldonovo = Math.Round(eurodolar, 2);
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter();
+                    try
+                    {
+                        connection.Open();
+                        adapter.UpdateCommand = connection.CreateCommand();
+                        adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = @Saldo WHERE (ID = {Class1.iduser})");
+                        adapter.UpdateCommand.Parameters.AddWithValue("@Saldo", saldonovo);
+                        adapter.UpdateCommand.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Notificação");
+                    }
+                    MessageBox.Show("O dinheiro foi atualizado para euros!");
+                }
+                else if (Class1.moedatipo == "£") //Libras para Euros
+                {
+                    connection.Open();
+                    MySqlCommand commmand = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
+                    MySqlDataReader reaader = commmand.ExecuteReader();
+                    reaader.Read();
+                    double libratoeuro = reaader.GetDouble(0);
+                    connection.Close();
+
+                    double eurolibra = (libratoeuro * 1.1612); // valor de 1 libra em euros
+                    double saldonovo = Math.Round(eurolibra, 2);
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter();
+                    try
+                    {
+                        connection.Open();
+                        adapter.UpdateCommand = connection.CreateCommand();
+                        adapter.UpdateCommand.CommandText = ($"UPDATE registo SET Saldo = @Saldo WHERE (ID = {Class1.iduser})");
+                        adapter.UpdateCommand.Parameters.AddWithValue("@Saldo", saldonovo);
+                        adapter.UpdateCommand.ExecuteNonQuery();
+                        connection.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Notificação");
+                    }
+                    MessageBox.Show("O dinheiro foi atualizado para euros!");
+                }
+                else
+                {
+                    //não faz nada
+                }
+                Class1.moedatipo = "€";
+
+                this.Hide();
+                Login login = new Login();
+                login.ShowDialog();
+            }
         }
 
         private void FecharApp_MouseHover(object sender, EventArgs e)
@@ -638,15 +706,8 @@ namespace Members_Only
             MinimizarApp.Image = Properties.Resources.MinimizarFinal3;
         }
 
-        private void pictureBox2_MouseHover(object sender, EventArgs e)
-        {
-            panel4.Visible = false;
-            panel3.Visible = true;
-            toolTip.SetToolTip(pictureBox2, $"Consulte o nosso Website em https://www.members-only.com/");
-        }
-
         private void panel4_MouseHover(object sender, EventArgs e)
-        {        
+        {
             panel4.Visible = false;
             panel3.Visible = true;
         }
@@ -662,6 +723,30 @@ namespace Members_Only
             Slidepanel.Height = (button1.Height - 15);
             Slidepanel.Top = (button1.Top + 10);
 
+            try
+            {
+                // caso o utilizador tenha foto 
+                connection.Open();
+                MySqlCommand xpto = new MySqlCommand($"SELECT * FROM imagens WHERE(ID = {Class1.iduser})", connection);
+                da = new MySqlDataAdapter(xpto);
+                DataTable table = new DataTable();
+                da.Fill(table);
+                byte[] idf = (byte[])table.Rows[0][1];
+                MemoryStream mse = new MemoryStream(idf);
+                pictureBox1.Image = Image.FromStream(mse);
+                da.Dispose();
+                connection.Close();
+            }
+            catch
+            {
+                // caso o utilizador não tenha foto
+                connection.Close();
+                pictureBox1.Image = Properties.Resources.uploaaad;
+                goto SemFoto;
+            }
+
+        SemFoto:
+
             connection.Open();
             MySqlCommand commmand = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
             MySqlDataReader reaader = commmand.ExecuteReader();
@@ -669,7 +754,7 @@ namespace Members_Only
             saldo = reaader.GetDouble(0);
             connection.Close();
             label_saldo.Text = $"{saldo}{Class1.moedatipo}";
-            
+
             if (label_saldo.Text.Length == 4)
             {
                 label_saldo.Location = new Point(153, 62);
@@ -755,7 +840,7 @@ namespace Members_Only
                 {
                     goto insertimg;
                 }
-                insertimg:
+            insertimg:
                 try
                 {
                     MySqlCommand command = new MySqlCommand("INSERT INTO imagens(Imagem, ID) VALUES(@Imagem, @ID)", connection);
@@ -771,9 +856,15 @@ namespace Members_Only
                 {
                     MessageBox.Show(ex.Message);
                 }
-                comsucesso:
+            comsucesso:
                 connection.Close();
-            }    
+            }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+            openChildForm(new Terminar());
         }
 
         private void pictureBox20_MouseClick(object sender, MouseEventArgs e)
