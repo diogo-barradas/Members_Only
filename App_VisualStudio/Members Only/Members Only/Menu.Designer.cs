@@ -1017,6 +1017,7 @@
             this.guna2TextBox1.IconRightSize = new System.Drawing.Size(15, 15);
             this.guna2TextBox1.Location = new System.Drawing.Point(557, 29);
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2TextBox1.MaxLength = 20;
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.DimGray;

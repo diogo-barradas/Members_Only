@@ -1,8 +1,8 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Members_Only
 {
@@ -188,7 +188,7 @@ namespace Members_Only
                     MessageBox.Show("O admin não pode ser apagado!");
                 }
                 else
-                {       
+                {
                     string sql = "DELETE FROM registo WHERE ID =" + id + "";
                     alo = new MySqlCommand(sql, cnn);
                     cnn.Open();

@@ -196,6 +196,7 @@
             this.textBox3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox3.ForeColor = System.Drawing.Color.Black;
             this.textBox3.Location = new System.Drawing.Point(94, 110);
+            this.textBox3.MaxLength = 25;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(162, 15);
             this.textBox3.TabIndex = 17;
@@ -285,6 +286,7 @@
             this.textBox1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Black;
             this.textBox1.Location = new System.Drawing.Point(336, 110);
+            this.textBox1.MaxLength = 4;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(136, 15);
             this.textBox1.TabIndex = 9;

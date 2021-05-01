@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Members_Only
 {

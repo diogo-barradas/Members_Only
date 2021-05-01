@@ -1,7 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Data;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Members_Only
 {
@@ -72,6 +72,11 @@ namespace Members_Only
                     {
                         textBox1.Text = "Valor a Depositar";
                         MessageBox.Show("Introduza um valor válido");
+                    }
+                    else if (textBox1.Text.Length > 5)
+                    {
+                        textBox1.Text = "Valor a Depositar";
+                        MessageBox.Show("Não podemos Depositar esse valor!!");
                     }
                     else
                     {

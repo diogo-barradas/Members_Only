@@ -1,7 +1,7 @@
-﻿using System;
-using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace Members_Only
 {
@@ -69,7 +69,7 @@ namespace Members_Only
         //Gerir a checkbox
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(textBox2.Text == "Digite o seu PIN")
+            if (textBox2.Text == "Digite o seu PIN")
             {
                 //não faz nada pois não está la o pin.
             }
@@ -83,7 +83,7 @@ namespace Members_Only
                 {
                     textBox2.UseSystemPasswordChar = true;
                 }
-            }      
+            }
         }
 
         //abrir novo form 
@@ -163,7 +163,7 @@ namespace Members_Only
                     textBox2.UseSystemPasswordChar = false;
                     MessageBox.Show(ox.Message, "Notificação");
                 }
-            }    
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -180,7 +180,7 @@ namespace Members_Only
         {
             pictureBox2.Image = Properties.Resources.closefinal5;
         }
-       
+
         //abrir novo form 
         private void button1_Click(object sender, EventArgs e)
         {

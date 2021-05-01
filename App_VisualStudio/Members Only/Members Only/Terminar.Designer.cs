@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Terminar));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -50,6 +51,7 @@
             this.Adicionar = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -62,6 +64,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.guna2PictureBox2);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.saldolabel);
             this.panel1.Controls.Add(this.moradalabel);
@@ -78,6 +81,21 @@
             this.panel1.Size = new System.Drawing.Size(766, 488);
             this.panel1.TabIndex = 0;
             this.panel1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = global::Members_Only.Properties.Resources.molduraaaa;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(145, 80);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(215, 190);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 23;
+            this.guna2PictureBox2.TabStop = false;
+            this.guna2PictureBox2.UseTransparentBackground = true;
             // 
             // panel2
             // 
@@ -151,6 +169,7 @@
             this.textBox2.HoverState.Parent = this.textBox2;
             this.textBox2.Location = new System.Drawing.Point(28, 150);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox2.MaxLength = 5;
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '\0';
             this.textBox2.PlaceholderText = "Digite o seu novo PIN";
@@ -182,6 +201,7 @@
             this.textBox1.IconRight = global::Members_Only.Properties.Resources.certoa;
             this.textBox1.Location = new System.Drawing.Point(28, 106);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.MaxLength = 25;
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '\0';
             this.textBox1.PlaceholderText = "Digite a sua nova morada";
@@ -210,6 +230,7 @@
             this.textBox4.IconRight = global::Members_Only.Properties.Resources.certoa;
             this.textBox4.Location = new System.Drawing.Point(28, 62);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox4.MaxLength = 4;
             this.textBox4.Name = "textBox4";
             this.textBox4.PasswordChar = '\0';
             this.textBox4.PlaceholderText = "Digite o seu ano de nascimento";
@@ -249,6 +270,7 @@
             // 
             // saldolabel
             // 
+            this.saldolabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.saldolabel.Animated = true;
             this.saldolabel.AutoRoundedCorners = true;
             this.saldolabel.BorderRadius = 14;
@@ -278,6 +300,7 @@
             // 
             // moradalabel
             // 
+            this.moradalabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.moradalabel.Animated = true;
             this.moradalabel.AutoRoundedCorners = true;
             this.moradalabel.BorderRadius = 14;
@@ -307,6 +330,7 @@
             // 
             // emaillabel
             // 
+            this.emaillabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.emaillabel.Animated = true;
             this.emaillabel.AutoRoundedCorners = true;
             this.emaillabel.BorderRadius = 14;
@@ -336,6 +360,7 @@
             // 
             // idadelabel
             // 
+            this.idadelabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.idadelabel.Animated = true;
             this.idadelabel.AutoRoundedCorners = true;
             this.idadelabel.BorderRadius = 14;
@@ -365,6 +390,7 @@
             // 
             // nomelabel
             // 
+            this.nomelabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nomelabel.Animated = true;
             this.nomelabel.AutoRoundedCorners = true;
             this.nomelabel.BorderRadius = 14;
@@ -394,6 +420,7 @@
             // 
             // idlabel
             // 
+            this.idlabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.idlabel.Animated = true;
             this.idlabel.AutoRoundedCorners = true;
             this.idlabel.BorderRadius = 14;
@@ -423,7 +450,7 @@
             // 
             // guna2Button1
             // 
-            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Button1.Animated = true;
             this.guna2Button1.AutoRoundedCorners = true;
             this.guna2Button1.BorderColor = System.Drawing.Color.LightGray;
@@ -445,6 +472,7 @@
             // 
             // guna2PictureBox1
             // 
+            this.guna2PictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.BorderRadius = 55;
             this.guna2PictureBox1.Image = global::Members_Only.Properties.Resources.uploaaad;
@@ -460,7 +488,7 @@
             // 
             // Eliminar
             // 
-            this.Eliminar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Eliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Eliminar.Animated = true;
             this.Eliminar.AutoRoundedCorners = true;
             this.Eliminar.BorderColor = System.Drawing.Color.LightGray;
@@ -482,7 +510,7 @@
             // 
             // Adicionar
             // 
-            this.Adicionar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.Adicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Adicionar.Animated = true;
             this.Adicionar.AutoRoundedCorners = true;
             this.Adicionar.BorderColor = System.Drawing.Color.LightGray;
@@ -527,6 +555,7 @@
             this.Name = "Terminar";
             this.Text = "Terminar";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -559,5 +588,6 @@
         private Guna.UI2.WinForms.Guna2TextBox textBox2;
         private Guna.UI2.WinForms.Guna2TextBox textBox1;
         private Guna.UI2.WinForms.Guna2TextBox textBox4;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
 }

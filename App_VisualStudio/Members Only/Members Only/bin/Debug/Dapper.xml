@@ -753,7 +753,7 @@
         </member>
         <member name="M:Dapper.SqlMapper.QueryAsync``3(System.Data.IDbConnection,System.String,System.Func{``0,``1,``2},System.Object,System.Data.IDbTransaction,System.Boolean,System.String,System.Nullable{System.Int32},System.Nullable{System.Data.CommandType})">
             <summary>
-            Perform a asynchronous multi-mapping query with 2 input types.
+            Perform an asynchronous multi-mapping query with 2 input types.
             This returns a single type, combined from the raw types via <paramref name="map"/>.
             </summary>
             <typeparam name="TFirst">The first type in the recordset.</typeparam>
@@ -772,7 +772,7 @@
         </member>
         <member name="M:Dapper.SqlMapper.QueryAsync``3(System.Data.IDbConnection,Dapper.CommandDefinition,System.Func{``0,``1,``2},System.String)">
             <summary>
-            Perform a asynchronous multi-mapping query with 2 input types.
+            Perform an asynchronous multi-mapping query with 2 input types.
             This returns a single type, combined from the raw types via <paramref name="map"/>.
             </summary>
             <typeparam name="TFirst">The first type in the recordset.</typeparam>
@@ -786,7 +786,7 @@
         </member>
         <member name="M:Dapper.SqlMapper.QueryAsync``4(System.Data.IDbConnection,System.String,System.Func{``0,``1,``2,``3},System.Object,System.Data.IDbTransaction,System.Boolean,System.String,System.Nullable{System.Int32},System.Nullable{System.Data.CommandType})">
             <summary>
-            Perform a asynchronous multi-mapping query with 3 input types.
+            Perform an asynchronous multi-mapping query with 3 input types.
             This returns a single type, combined from the raw types via <paramref name="map"/>.
             </summary>
             <typeparam name="TFirst">The first type in the recordset.</typeparam>
@@ -806,7 +806,7 @@
         </member>
         <member name="M:Dapper.SqlMapper.QueryAsync``4(System.Data.IDbConnection,Dapper.CommandDefinition,System.Func{``0,``1,``2,``3},System.String)">
             <summary>
-            Perform a asynchronous multi-mapping query with 3 input types.
+            Perform an asynchronous multi-mapping query with 3 input types.
             This returns a single type, combined from the raw types via <paramref name="map"/>.
             </summary>
             <typeparam name="TFirst">The first type in the recordset.</typeparam>
@@ -821,7 +821,7 @@
         </member>
         <member name="M:Dapper.SqlMapper.QueryAsync``5(System.Data.IDbConnection,System.String,System.Func{``0,``1,``2,``3,``4},System.Object,System.Data.IDbTransaction,System.Boolean,System.String,System.Nullable{System.Int32},System.Nullable{System.Data.CommandType})">
             <summary>
-            Perform a asynchronous multi-mapping query with 4 input types.
+            Perform an asynchronous multi-mapping query with 4 input types.
             This returns a single type, combined from the raw types via <paramref name="map"/>.
             </summary>
             <typeparam name="TFirst">The first type in the recordset.</typeparam>
@@ -842,7 +842,7 @@
         </member>
         <member name="M:Dapper.SqlMapper.QueryAsync``5(System.Data.IDbConnection,Dapper.CommandDefinition,System.Func{``0,``1,``2,``3,``4},System.String)">
             <summary>
-            Perform a asynchronous multi-mapping query with 4 input types.
+            Perform an asynchronous multi-mapping query with 4 input types.
             This returns a single type, combined from the raw types via <paramref name="map"/>.
             </summary>
             <typeparam name="TFirst">The first type in the recordset.</typeparam>
@@ -858,7 +858,7 @@
         </member>
         <member name="M:Dapper.SqlMapper.QueryAsync``6(System.Data.IDbConnection,System.String,System.Func{``0,``1,``2,``3,``4,``5},System.Object,System.Data.IDbTransaction,System.Boolean,System.String,System.Nullable{System.Int32},System.Nullable{System.Data.CommandType})">
             <summary>
-            Perform a asynchronous multi-mapping query with 5 input types.
+            Perform an asynchronous multi-mapping query with 5 input types.
             This returns a single type, combined from the raw types via <paramref name="map"/>.
             </summary>
             <typeparam name="TFirst">The first type in the recordset.</typeparam>
@@ -880,7 +880,7 @@
         </member>
         <member name="M:Dapper.SqlMapper.QueryAsync``6(System.Data.IDbConnection,Dapper.CommandDefinition,System.Func{``0,``1,``2,``3,``4,``5},System.String)">
             <summary>
-            Perform a asynchronous multi-mapping query with 5 input types.
+            Perform an asynchronous multi-mapping query with 5 input types.
             This returns a single type, combined from the raw types via <paramref name="map"/>.
             </summary>
             <typeparam name="TFirst">The first type in the recordset.</typeparam>
@@ -897,7 +897,7 @@
         </member>
         <member name="M:Dapper.SqlMapper.QueryAsync``7(System.Data.IDbConnection,System.String,System.Func{``0,``1,``2,``3,``4,``5,``6},System.Object,System.Data.IDbTransaction,System.Boolean,System.String,System.Nullable{System.Int32},System.Nullable{System.Data.CommandType})">
             <summary>
-            Perform a asynchronous multi-mapping query with 6 input types.
+            Perform an asynchronous multi-mapping query with 6 input types.
             This returns a single type, combined from the raw types via <paramref name="map"/>.
             </summary>
             <typeparam name="TFirst">The first type in the recordset.</typeparam>
@@ -920,7 +920,7 @@
         </member>
         <member name="M:Dapper.SqlMapper.QueryAsync``7(System.Data.IDbConnection,Dapper.CommandDefinition,System.Func{``0,``1,``2,``3,``4,``5,``6},System.String)">
             <summary>
-            Perform a asynchronous multi-mapping query with 6 input types.
+            Perform an asynchronous multi-mapping query with 6 input types.
             This returns a single type, combined from the raw types via <paramref name="map"/>.
             </summary>
             <typeparam name="TFirst">The first type in the recordset.</typeparam>
@@ -938,7 +938,7 @@
         </member>
         <member name="M:Dapper.SqlMapper.QueryAsync``8(System.Data.IDbConnection,System.String,System.Func{``0,``1,``2,``3,``4,``5,``6,``7},System.Object,System.Data.IDbTransaction,System.Boolean,System.String,System.Nullable{System.Int32},System.Nullable{System.Data.CommandType})">
             <summary>
-            Perform a asynchronous multi-mapping query with 7 input types.
+            Perform an asynchronous multi-mapping query with 7 input types.
             This returns a single type, combined from the raw types via <paramref name="map"/>.
             </summary>
             <typeparam name="TFirst">The first type in the recordset.</typeparam>
@@ -981,7 +981,7 @@
         </member>
         <member name="M:Dapper.SqlMapper.QueryAsync``1(System.Data.IDbConnection,System.String,System.Type[],System.Func{System.Object[],``0},System.Object,System.Data.IDbTransaction,System.Boolean,System.String,System.Nullable{System.Int32},System.Nullable{System.Data.CommandType})">
             <summary>
-            Perform a asynchronous multi-mapping query with an arbitrary number of input types.
+            Perform an asynchronous multi-mapping query with an arbitrary number of input types.
             This returns a single type, combined from the raw types via <paramref name="map"/>.
             </summary>
             <typeparam name="TReturn">The combined type to return.</typeparam>
@@ -1890,8 +1890,8 @@
             Throws a data exception, only used internally
             </summary>
             <param name="ex">The exception to throw.</param>
-            <param name="index">The index the exception occured at.</param>
-            <param name="reader">The reader the exception occured in.</param>
+            <param name="index">The index the exception occurred at.</param>
+            <param name="reader">The reader the exception occurred in.</param>
             <param name="value">The value that caused the exception.</param>
         </member>
         <member name="P:Dapper.SqlMapper.ConnectionStringComparer">

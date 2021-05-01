@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace Members_Only
 {
@@ -41,7 +41,7 @@ namespace Members_Only
             {
                 Data2.Visible = true;
             }
-            else if(progressBar1.Value == 100)
+            else if (progressBar1.Value == 100)
             {
                 timer2.Enabled = false;
                 Login form = new Login();

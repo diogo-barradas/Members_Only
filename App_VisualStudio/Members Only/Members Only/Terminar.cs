@@ -42,7 +42,7 @@ namespace Members_Only
                 goto SemFoto;
             }
 
-            SemFoto:
+        SemFoto:
             connection.Open();
             MySqlCommand command = new MySqlCommand($"SELECT Idade, Email, Morada, Saldo FROM registo WHERE(ID = {Class1.iduser})", connection);
             MySqlDataReader reader = command.ExecuteReader();
