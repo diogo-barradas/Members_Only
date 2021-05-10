@@ -892,7 +892,7 @@ input, select, textarea {
 	ul.icons {
 		cursor: default;
 		list-style: none;
-		padding-left: 491px;
+		padding-left: 480px;
 	}
 
 		ul.icons li {
@@ -1653,3 +1653,70 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+		.collapse-content2 {
+			width: 38vw;
+			margin: auto;
+			box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+		  }
+		  
+		  .collapse {
+			background: rgb(27, 30, 34);
+		  }
+		  
+		  .collapse a {
+			display: block;
+			font-size: 1rem;
+			font-weight: 500;
+			padding: 0.9rem 1.8rem;
+			color: #fff;
+			position: relative;
+		  }
+		  
+		  .collapse a.instagram {
+			background: #3d7a6f;
+		  }
+		  
+		  .collapse a.twitter {
+			background: #bea54a;
+		  }
+		  
+		  .collapse a.dribbble {
+			background: #be452c;
+		  }
+		  
+		  .collapse a.youtube {
+			background: #118693;
+		  }
+		  
+		  .collapse a:before {
+			content: "";
+			border-top: 7px solid #fff;
+			border-left: 7px solid transparent;
+			border-right: 7px solid transparent;
+			position: absolute;
+			top: 25px;
+			right: 30px;
+		  }
+		  
+		  .inner-content2 {
+			padding: 1.8rem;
+		  }
+		  
+		  .content2 {
+			max-height: 0em;
+			transition: 0.3s linear 0s;
+			overflow: hidden;
+		  }
+		  
+		  .collapse + .collapse a {
+			border-top: 1px solid rgba(255, 255, 255, 0.7);
+		  }
+		  
+		  .collapse:target .content2 {
+			max-height: 15em;
+		  }
+		  
+		  .collapse:target a:before {
+			transform: rotate(-90deg);
+		  }

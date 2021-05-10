@@ -106,11 +106,12 @@ namespace Members_Only
                                 try
                                 {
                                     cnn.Open();
-                                    MySqlCommand xpto = new MySqlCommand($"SELECT Saldo FROM registo WHERE(ID = {_iddestino})", cnn);
+                                    MySqlCommand xpto = new MySqlCommand($"SELECT Saldo, Username FROM registo WHERE(ID = {_iddestino})", cnn);
                                     MySqlDataReader abc = xpto.ExecuteReader();
                                     if (abc.Read())
                                     {
                                         _saldodestino = abc.GetDouble(0);
+                                        string distousername = abc.GetString(1);
                                         double saldofinal = _saldo -= transferirvalor;
                                         double saldofinaldestino = _saldodestino += transferirvalor;
                                         Saldo.Text = $"{saldofinal}{Class1.moedatipo}";
@@ -130,7 +131,7 @@ namespace Members_Only
                                         adapter.UpdateCommand.Parameters.AddWithValue("@Saldonovo", saldofinaldestino);
                                         adapter.UpdateCommand.ExecuteNonQuery();
 
-                                        MessageBox.Show($"{transferirvalor}{Class1.moedatipo} foram Transferidos!");
+                                        MessageBox.Show($"{transferirvalor}{Class1.moedatipo} foram Transferidos para {distousername}!");
                                         tempo.Text = DateTime.Now.ToShortTimeString();//recebe a hora atual
 
                                         MySqlCommand comando = new MySqlCommand($"INSERT INTO transferencias(Descriçao, Valor, Hora, ID, idDestinatario) VALUES (@Descriçao, @Valor, @Hora, {Class1.iduser}, {_iddestino})", cnn);
